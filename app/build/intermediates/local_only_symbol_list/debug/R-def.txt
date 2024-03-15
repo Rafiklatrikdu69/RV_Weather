@@ -22,6 +22,7 @@ id action_settings
 id app_bar_main
 id drawer_layout
 id fab
+id fragment
 id imageView
 id mobile_navigation
 id nav_gallery

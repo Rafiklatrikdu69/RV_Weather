@@ -7,7 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.bouchenna.rv_weather.R
 import com.bouchenna.rv_weather.databinding.FragmentHomeBinding
+import com.google.android.libraries.places.api.Places
+import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 
 class HomeFragment : Fragment() {
 
@@ -32,6 +36,21 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+        if (!Places.isInitialized()) {
+            Places.initialize(
+                requireContext(),
+                "AIzaSyAUhesh_MfnKVmEET8G6IKmDVaYUocE_yI"
+            )
+        }
+
+        val autocompleteFragment =
+            childFragmentManager.findFragmentById(R.id.fragment)
+                    as? AutocompleteSupportFragment
+
+        autocompleteFragment?.setPlaceFields(
+            listOf(Place.Field.LAT_LNG, Place.Field.NAME)
+        )
+
         return root
     }
 

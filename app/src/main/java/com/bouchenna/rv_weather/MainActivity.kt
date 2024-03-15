@@ -2,6 +2,7 @@ package com.bouchenna.rv_weather
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.AutoCompleteTextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -12,6 +13,10 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.bouchenna.rv_weather.databinding.ActivityMainBinding
+import com.google.android.gms.fitness.data.Field
+import com.google.android.libraries.places.api.Places
+import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +45,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
             ), drawerLayout
         )
+
+
+       // autoCompletSupportFragment.setOnPlaceSelectedListener()
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
