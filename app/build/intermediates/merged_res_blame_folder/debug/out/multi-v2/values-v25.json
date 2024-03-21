@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< Updated upstream
             "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-46:/values-v25/values-v25.xml",
             "map": [
                 {
                     "source": "C:\\Users\\valen\\.gradle\\caches\\transforms-3\\60b492a510ec931c8abbf232e0a5612c\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
+=======
+            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-56:/values-v25/values-v25.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\valen\\.gradle\\caches\\transforms-3\\f7910153a680fce6fddbcfce49bfb0cb\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
+>>>>>>> Stashed changes
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

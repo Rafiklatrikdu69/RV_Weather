@@ -1,7 +1,11 @@
 {
     "logs": [
         {
+<<<<<<< Updated upstream
             "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-46:/values-w600dp-v13/values-w600dp-v13.xml",
+=======
+            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-56:/values-w600dp-v13/values-w600dp-v13.xml",
+>>>>>>> Stashed changes
             "map": [
                 {
                     "source": "D:\\Etude\\BUT_1\\semestre_4\\Developpement_Mobile\\TP2\\rv_weather\\app\\src\\main\\res\\values-w600dp\\dimens.xml",

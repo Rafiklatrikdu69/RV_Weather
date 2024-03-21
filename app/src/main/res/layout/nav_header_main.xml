@@ -31,5 +31,28 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< Updated upstream
         android:text="@string/nav_header_subtitle" />
+=======
+
+        android:text="by :" />
+
+    <TextView
+        android:id="@+id/textViewRafik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rafik Bouchenna" />
+
+    <Button
+        android:id="@+id/buttonDeconnexion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DEconnexion" />
+
+    <TextView
+        android:id="@+id/textViewValentin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valentin Sonney" />
+>>>>>>> Stashed changes
 </LinearLayout>

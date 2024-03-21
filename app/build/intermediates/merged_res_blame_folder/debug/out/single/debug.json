@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< Updated upstream
         "merged": "com.bouchenna.rv_weather.app-merged_res-48:/drawable_side_nav_bar.xml.flat",
         "source": "com.bouchenna.rv_weather.app-main-50:/drawable/side_nav_bar.xml"
     },
@@ -118,5 +119,137 @@
     {
         "merged": "com.bouchenna.rv_weather.app-merged_res-48:/layout_fragment_home.xml.flat",
         "source": "com.bouchenna.rv_weather.app-main-50:/layout/fragment_home.xml"
+=======
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/layout_activity_main.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/layout_fragment_slideshow.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/layout/fragment_slideshow.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/layout_activity_register.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/layout_fragment_gallery.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/layout/fragment_gallery.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/navigation_mobile_navigation.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/navigation/mobile_navigation.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/drawable_ic_manu_add.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/drawable/ic_manu_add.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/menu_activity_main_drawer.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/drawable_ic_menu_slideshow.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/drawable/ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/drawable_ic_menu_camera.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/drawable/ic_menu_camera.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/xml_data_extraction_rules.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/drawable_ic_menu_gallery.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/drawable/ic_menu_gallery.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/drawable_side_nav_bar.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/drawable/side_nav_bar.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/layout_nav_header_main.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/layout/nav_header_main.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/layout_content_main.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/layout_app_bar_main.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/layout/app_bar_main.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/menu_main.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/menu/main.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/layout_fragment_home.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/xml_backup_rules.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/layout_activity_connexion.xml.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/layout/activity_connexion.xml"
+    },
+    {
+        "merged": "com.bouchenna.rv_weather.app-merged_res-58:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.bouchenna.rv_weather.app-main-60:/mipmap-mdpi/ic_launcher.webp"
+>>>>>>> Stashed changes
     }
 ]
