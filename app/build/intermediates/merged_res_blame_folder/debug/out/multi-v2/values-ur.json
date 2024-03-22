@@ -1,8 +1,42 @@
 {
     "logs": [
         {
-            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-50:/values-ur/values-ur.xml",
+            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-53:/values-ur/values-ur.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\806fe4b2b4d18ae9faebd3846bf77ed6\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-ur\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "147",
+                        "endOffsets": "342"
+                    },
+                    "to": {
+                        "startLines": "56",
+                        "startColumns": "4",
+                        "startOffsets": "5472",
+                        "endColumns": "151",
+                        "endOffsets": "5619"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\d088f7158f9ed387980c9f2afc25e3d4\\transformed\\jetified-places-3.3.0\\res\\values-ur\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11",
+                        "startColumns": "0,0,0,0,0,0,0,0",
+                        "startOffsets": "184,255,320,415,486,535,613,689",
+                        "endColumns": "70,64,94,70,48,77,75,57",
+                        "endOffsets": "254,319,414,485,534,612,688,746"
+                    },
+                    "to": {
+                        "startLines": "128,129,130,131,132,133,134,135",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "11660,11735,11804,11903,11978,12031,12113,12193",
+                        "endColumns": "74,68,98,74,52,81,79,61",
+                        "endOffsets": "11730,11799,11898,11973,12026,12108,12188,12250"
+                    }
+                },
                 {
                     "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\9421bcffda200824c2fe3ef8d125a3b4\\transformed\\appcompat-1.6.1\\res\\values-ur\\values-ur.xml",
                     "from": {
@@ -21,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a4662592e799a4f8b3a303ac459ba93d\\transformed\\play-services-base-18.0.1\\res\\values-ur\\values.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\1cd06b16083ddf6fc313d53715597301\\transformed\\jetified-play-services-base-18.0.1\\res\\values-ur\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -88,40 +122,6 @@
                         "startOffsets": "3457,3555,3657,3759,3863,3966,4064,12341",
                         "endColumns": "97,101,101,103,102,97,113,100",
                         "endOffsets": "3550,3652,3754,3858,3961,4059,4173,12437"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a26c8427b288ad82c0ed4c273e6492c4\\transformed\\places-3.3.0\\res\\values-ur\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0",
-                        "startOffsets": "184,255,320,415,486,535,613,689",
-                        "endColumns": "70,64,94,70,48,77,75,57",
-                        "endOffsets": "254,319,414,485,534,612,688,746"
-                    },
-                    "to": {
-                        "startLines": "128,129,130,131,132,133,134,135",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "11660,11735,11804,11903,11978,12031,12113,12193",
-                        "endColumns": "74,68,98,74,52,81,79,61",
-                        "endOffsets": "11730,11799,11898,11973,12026,12108,12188,12250"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\dc473bfc9113276c019f4eb80fe4a9ef\\transformed\\play-services-basement-18.0.0\\res\\values-ur\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "147",
-                        "endOffsets": "342"
-                    },
-                    "to": {
-                        "startLines": "56",
-                        "startColumns": "4",
-                        "startOffsets": "5472",
-                        "endColumns": "151",
-                        "endOffsets": "5619"
                     }
                 }
             ]
