@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-50:/values-sv/values-sv.xml",
+            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-53:/values-sv/values-sv.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\dc473bfc9113276c019f4eb80fe4a9ef\\transformed\\play-services-basement-18.0.0\\res\\values-sv\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "143",
-                        "endOffsets": "338"
-                    },
-                    "to": {
-                        "startLines": "56",
-                        "startColumns": "4",
-                        "startOffsets": "5464",
-                        "endColumns": "147",
-                        "endOffsets": "5607"
-                    }
-                },
                 {
                     "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\d65c2917f3c70c810ac2a84036541ea0\\transformed\\material-1.11.0\\res\\values-sv\\values-sv.xml",
                     "from": {
@@ -37,6 +20,23 @@
                         "endLines": "5,33,34,35,36,37,45,46,47,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,127",
                         "endColumns": "12,98,91,80,101,79,97,121,78,62,91,63,59,91,64,62,61,66,63,53,104,58,60,53,68,118,82,83,135,78,83,121,85,77,53,50,65,68,73,88,75,71,76,70,73,110,90,78,86,87,71,73,84,50,78,66,80,83,61,63,62,67,106,98,98,94,57,54,77",
                         "endOffsets": "311,3083,3175,3256,3358,3438,4264,4386,4465,6734,6826,6890,6950,7042,7107,7170,7232,7299,7363,7417,7522,7581,7642,7696,7765,7884,7967,8051,8187,8266,8350,8472,8558,8636,8690,8741,8807,8876,8950,9039,9115,9187,9264,9335,9409,9520,9611,9690,9777,9865,9937,10011,10096,10147,10226,10293,10374,10458,10520,10584,10647,10715,10822,10921,11020,11115,11173,11228,11534"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\1cd06b16083ddf6fc313d53715597301\\transformed\\jetified-play-services-base-18.0.1\\res\\values-sv\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,296,449,572,678,815,936,1055,1155,1299,1403,1561,1685,1835,1987,2049,2108",
+                        "endColumns": "102,152,122,105,136,120,118,99,143,103,157,123,149,151,61,58,74",
+                        "endOffsets": "295,448,571,677,814,935,1054,1154,1298,1402,1560,1684,1834,1986,2048,2107,2182"
+                    },
+                    "to": {
+                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4470,4577,4734,4861,4971,5112,5237,5360,5612,5760,5868,6030,6158,6312,6468,6534,6597",
+                        "endColumns": "106,156,126,109,140,124,122,103,147,107,161,127,153,155,65,62,78",
+                        "endOffsets": "4572,4729,4856,4966,5107,5232,5355,5459,5755,5863,6025,6153,6307,6463,6529,6592,6671"
                     }
                 },
                 {
@@ -74,23 +74,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a26c8427b288ad82c0ed4c273e6492c4\\transformed\\places-3.3.0\\res\\values-sv\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0",
-                        "startOffsets": "184,255,319,407,479,524,598,680",
-                        "endColumns": "70,63,87,71,44,73,81,52",
-                        "endOffsets": "254,318,406,478,523,597,679,732"
-                    },
-                    "to": {
-                        "startLines": "128,129,130,131,132,133,134,135",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "11539,11614,11682,11774,11850,11899,11977,12063",
-                        "endColumns": "74,67,91,75,48,77,85,56",
-                        "endOffsets": "11609,11677,11769,11845,11894,11972,12058,12115"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\81d8648a378d0a5f5a7fbb8326add61b\\transformed\\core-1.12.0\\res\\values-sv\\values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -108,20 +91,37 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a4662592e799a4f8b3a303ac459ba93d\\transformed\\play-services-base-18.0.1\\res\\values-sv\\values.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\806fe4b2b4d18ae9faebd3846bf77ed6\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-sv\\values.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,296,449,572,678,815,936,1055,1155,1299,1403,1561,1685,1835,1987,2049,2108",
-                        "endColumns": "102,152,122,105,136,120,118,99,143,103,157,123,149,151,61,58,74",
-                        "endOffsets": "295,448,571,677,814,935,1054,1154,1298,1402,1560,1684,1834,1986,2048,2107,2182"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "143",
+                        "endOffsets": "338"
                     },
                     "to": {
-                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4470,4577,4734,4861,4971,5112,5237,5360,5612,5760,5868,6030,6158,6312,6468,6534,6597",
-                        "endColumns": "106,156,126,109,140,124,122,103,147,107,161,127,153,155,65,62,78",
-                        "endOffsets": "4572,4729,4856,4966,5107,5232,5355,5459,5755,5863,6025,6153,6307,6463,6529,6592,6671"
+                        "startLines": "56",
+                        "startColumns": "4",
+                        "startOffsets": "5464",
+                        "endColumns": "147",
+                        "endOffsets": "5607"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\d088f7158f9ed387980c9f2afc25e3d4\\transformed\\jetified-places-3.3.0\\res\\values-sv\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11",
+                        "startColumns": "0,0,0,0,0,0,0,0",
+                        "startOffsets": "184,255,319,407,479,524,598,680",
+                        "endColumns": "70,63,87,71,44,73,81,52",
+                        "endOffsets": "254,318,406,478,523,597,679,732"
+                    },
+                    "to": {
+                        "startLines": "128,129,130,131,132,133,134,135",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "11539,11614,11682,11774,11850,11899,11977,12063",
+                        "endColumns": "74,67,91,75,48,77,85,56",
+                        "endOffsets": "11609,11677,11769,11845,11894,11972,12058,12115"
                     }
                 }
             ]

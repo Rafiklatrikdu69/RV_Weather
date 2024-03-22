@@ -4,7 +4,7 @@
             "outputFile": "com.bouchenna.rv_weather.test.app-mergeDebugAndroidTestResources-3:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a398584d6b5cd441ab396e8538531035\\transformed\\core-1.5.0\\res\\values-v18\\values.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\06c9634a61ed07bf28eac57addbfcfbf\\transformed\\core-1.5.0\\res\\values-v18\\values.xml",
                     "from": {
                         "startLines": "4,12",
                         "startColumns": "0,0",

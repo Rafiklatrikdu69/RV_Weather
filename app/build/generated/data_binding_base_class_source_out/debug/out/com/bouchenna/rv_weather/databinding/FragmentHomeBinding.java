@@ -4,6 +4,7 @@ package com.bouchenna.rv_weather.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +12,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.bouchenna.rv_weather.R;
+import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,11 +23,29 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final BottomAppBar bottomAppBar;
+
+  @NonNull
+  public final ImageView meteo;
+
+  @NonNull
+  public final TextView nomVille;
+
+  @NonNull
   public final TextView textHome;
 
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textHome) {
+  @NonNull
+  public final MaterialCardView textView;
+
+  private FragmentHomeBinding(@NonNull ConstraintLayout rootView,
+      @NonNull BottomAppBar bottomAppBar, @NonNull ImageView meteo, @NonNull TextView nomVille,
+      @NonNull TextView textHome, @NonNull MaterialCardView textView) {
     this.rootView = rootView;
+    this.bottomAppBar = bottomAppBar;
+    this.meteo = meteo;
+    this.nomVille = nomVille;
     this.textHome = textHome;
+    this.textView = textView;
   }
 
   @Override
@@ -54,13 +75,38 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottomAppBar;
+      BottomAppBar bottomAppBar = ViewBindings.findChildViewById(rootView, id);
+      if (bottomAppBar == null) {
+        break missingId;
+      }
+
+      id = R.id.meteo;
+      ImageView meteo = ViewBindings.findChildViewById(rootView, id);
+      if (meteo == null) {
+        break missingId;
+      }
+
+      id = R.id.nomVille;
+      TextView nomVille = ViewBindings.findChildViewById(rootView, id);
+      if (nomVille == null) {
+        break missingId;
+      }
+
       id = R.id.text_home;
       TextView textHome = ViewBindings.findChildViewById(rootView, id);
       if (textHome == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, textHome);
+      id = R.id.textView;
+      MaterialCardView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((ConstraintLayout) rootView, bottomAppBar, meteo, nomVille,
+          textHome, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
