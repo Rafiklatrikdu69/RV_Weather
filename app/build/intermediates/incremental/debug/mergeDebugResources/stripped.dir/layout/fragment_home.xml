@@ -49,4 +49,55 @@
             android:layout_height="match_parent" />
 
     </FrameLayout>
+
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/white"
+    android:layout_margin="32dp"
+    app:cardElevation="16dp"
+  app:layout_constraintBottom_toBottomOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nomVille"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:hint="Aucune ville"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/meteo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:hint="Aucune météo"
+            app:layout_constraintTop_toBottomOf="@id/nomVille"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:padding="10dp"
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/menu_bottom_app_bar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

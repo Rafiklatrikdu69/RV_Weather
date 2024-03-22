@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-50:/values-ko/values-ko.xml",
+            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-53:/values-ko/values-ko.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\d65c2917f3c70c810ac2a84036541ea0\\transformed\\material-1.11.0\\res\\values-ko\\values-ko.xml",
@@ -23,23 +23,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a26c8427b288ad82c0ed4c273e6492c4\\transformed\\places-3.3.0\\res\\values-ko\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0",
-                        "startOffsets": "184,249,305,383,445,486,545,607",
-                        "endColumns": "64,55,77,61,40,58,61,46",
-                        "endOffsets": "248,304,382,444,485,544,606,653"
-                    },
-                    "to": {
-                        "startLines": "128,129,130,131,132,133,134,135",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "10541,10610,10670,10752,10818,10863,10926,10992",
-                        "endColumns": "68,59,81,65,44,62,65,50",
-                        "endOffsets": "10605,10665,10747,10813,10858,10921,10987,11038"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\e8aff63bfd1f759115931fd1052ec4d8\\transformed\\navigation-ui-2.7.7\\res\\values-ko\\values-ko.xml",
                     "from": {
                         "startLines": "2,3",
@@ -54,23 +37,6 @@
                         "startOffsets": "10267,10367",
                         "endColumns": "99,101",
                         "endOffsets": "10362,10464"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a4662592e799a4f8b3a303ac459ba93d\\transformed\\play-services-base-18.0.1\\res\\values-ko\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,293,428,540,638,749,862,965,1056,1197,1296,1428,1542,1656,1771,1826,1880",
-                        "endColumns": "99,134,111,97,110,112,102,90,140,98,131,113,113,114,54,53,70",
-                        "endOffsets": "292,427,539,637,748,861,964,1055,1196,1295,1427,1541,1655,1770,1825,1879,1950"
-                    },
-                    "to": {
-                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4171,4275,4414,4530,4632,4747,4864,4971,5187,5332,5435,5571,5689,5807,5926,5985,6043",
-                        "endColumns": "103,138,115,101,114,116,106,94,144,102,135,117,117,118,58,57,74",
-                        "endOffsets": "4270,4409,4525,4627,4742,4859,4966,5061,5327,5430,5566,5684,5802,5921,5980,6038,6113"
                     }
                 },
                 {
@@ -91,20 +57,37 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\dc473bfc9113276c019f4eb80fe4a9ef\\transformed\\play-services-basement-18.0.0\\res\\values-ko\\values.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\1cd06b16083ddf6fc313d53715597301\\transformed\\jetified-play-services-base-18.0.1\\res\\values-ko\\values.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "116",
-                        "endOffsets": "311"
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,293,428,540,638,749,862,965,1056,1197,1296,1428,1542,1656,1771,1826,1880",
+                        "endColumns": "99,134,111,97,110,112,102,90,140,98,131,113,113,114,54,53,70",
+                        "endOffsets": "292,427,539,637,748,861,964,1055,1196,1295,1427,1541,1655,1770,1825,1879,1950"
                     },
                     "to": {
-                        "startLines": "56",
-                        "startColumns": "4",
-                        "startOffsets": "5066",
-                        "endColumns": "120",
-                        "endOffsets": "5182"
+                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4171,4275,4414,4530,4632,4747,4864,4971,5187,5332,5435,5571,5689,5807,5926,5985,6043",
+                        "endColumns": "103,138,115,101,114,116,106,94,144,102,135,117,117,118,58,57,74",
+                        "endOffsets": "4270,4409,4525,4627,4742,4859,4966,5061,5327,5430,5566,5684,5802,5921,5980,6038,6113"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\d088f7158f9ed387980c9f2afc25e3d4\\transformed\\jetified-places-3.3.0\\res\\values-ko\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11",
+                        "startColumns": "0,0,0,0,0,0,0,0",
+                        "startOffsets": "184,249,305,383,445,486,545,607",
+                        "endColumns": "64,55,77,61,40,58,61,46",
+                        "endOffsets": "248,304,382,444,485,544,606,653"
+                    },
+                    "to": {
+                        "startLines": "128,129,130,131,132,133,134,135",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "10541,10610,10670,10752,10818,10863,10926,10992",
+                        "endColumns": "68,59,81,65,44,62,65,50",
+                        "endOffsets": "10605,10665,10747,10813,10858,10921,10987,11038"
                     }
                 },
                 {
@@ -122,6 +105,23 @@
                         "startOffsets": "3230,3322,3422,3516,3613,3709,3807,11122",
                         "endColumns": "91,99,93,96,95,97,99,100",
                         "endOffsets": "3317,3417,3511,3608,3704,3802,3902,11218"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\806fe4b2b4d18ae9faebd3846bf77ed6\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-ko\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "116",
+                        "endOffsets": "311"
+                    },
+                    "to": {
+                        "startLines": "56",
+                        "startColumns": "4",
+                        "startOffsets": "5066",
+                        "endColumns": "120",
+                        "endOffsets": "5182"
                     }
                 }
             ]

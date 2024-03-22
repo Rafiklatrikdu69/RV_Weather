@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-50:/values-km/values-km.xml",
+            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-53:/values-km/values-km.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\d088f7158f9ed387980c9f2afc25e3d4\\transformed\\jetified-places-3.3.0\\res\\values-km\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11",
+                        "startColumns": "0,0,0,0,0,0,0,0",
+                        "startOffsets": "184,260,328,417,487,532,600,678",
+                        "endColumns": "75,67,88,69,44,67,77,56",
+                        "endOffsets": "259,327,416,486,531,599,677,734"
+                    },
+                    "to": {
+                        "startLines": "128,129,130,131,132,133,134,135",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "11658,11738,11810,11903,11977,12026,12098,12180",
+                        "endColumns": "79,71,92,73,48,71,81,60",
+                        "endOffsets": "11733,11805,11898,11972,12021,12093,12175,12236"
+                    }
+                },
                 {
                     "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\e8aff63bfd1f759115931fd1052ec4d8\\transformed\\navigation-ui-2.7.7\\res\\values-km\\values-km.xml",
                     "from": {
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\dc473bfc9113276c019f4eb80fe4a9ef\\transformed\\play-services-basement-18.0.0\\res\\values-km\\values.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\806fe4b2b4d18ae9faebd3846bf77ed6\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-km\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -52,23 +69,6 @@
                         "startOffsets": "5411",
                         "endColumns": "148",
                         "endOffsets": "5555"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a4662592e799a4f8b3a303ac459ba93d\\transformed\\play-services-base-18.0.1\\res\\values-km\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,291,442,559,660,818,938,1055,1160,1314,1427,1594,1715,1856,2010,2070,2124",
-                        "endColumns": "97,150,116,100,157,119,116,104,153,112,166,120,140,153,59,53,72",
-                        "endOffsets": "290,441,558,659,817,937,1054,1159,1313,1426,1593,1714,1855,2009,2069,2123,2196"
-                    },
-                    "to": {
-                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4412,4514,4669,4790,4895,5057,5181,5302,5560,5718,5835,6006,6131,6276,6434,6498,6556",
-                        "endColumns": "101,154,120,104,161,123,120,108,157,116,170,124,144,157,63,57,76",
-                        "endOffsets": "4509,4664,4785,4890,5052,5176,5297,5406,5713,5830,6001,6126,6271,6429,6493,6551,6628"
                     }
                 },
                 {
@@ -89,20 +89,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a26c8427b288ad82c0ed4c273e6492c4\\transformed\\places-3.3.0\\res\\values-km\\values.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\1cd06b16083ddf6fc313d53715597301\\transformed\\jetified-play-services-base-18.0.1\\res\\values-km\\values.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0",
-                        "startOffsets": "184,260,328,417,487,532,600,678",
-                        "endColumns": "75,67,88,69,44,67,77,56",
-                        "endOffsets": "259,327,416,486,531,599,677,734"
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,291,442,559,660,818,938,1055,1160,1314,1427,1594,1715,1856,2010,2070,2124",
+                        "endColumns": "97,150,116,100,157,119,116,104,153,112,166,120,140,153,59,53,72",
+                        "endOffsets": "290,441,558,659,817,937,1054,1159,1313,1426,1593,1714,1855,2009,2069,2123,2196"
                     },
                     "to": {
-                        "startLines": "128,129,130,131,132,133,134,135",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "11658,11738,11810,11903,11977,12026,12098,12180",
-                        "endColumns": "79,71,92,73,48,71,81,60",
-                        "endOffsets": "11733,11805,11898,11972,12021,12093,12175,12236"
+                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4412,4514,4669,4790,4895,5057,5181,5302,5560,5718,5835,6006,6131,6276,6434,6498,6556",
+                        "endColumns": "101,154,120,104,161,123,120,108,157,116,170,124,144,157,63,57,76",
+                        "endOffsets": "4509,4664,4785,4890,5052,5176,5297,5406,5713,5830,6001,6126,6271,6429,6493,6551,6628"
                     }
                 },
                 {

@@ -7,13 +7,18 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
@@ -25,6 +30,7 @@ import com.bouchenna.rv_weather.R
 import com.bouchenna.rv_weather.WeatherResponse
 import com.bouchenna.rv_weather.databinding.FragmentHomeBinding
 import com.bouchenna.rv_weather.service.Api_Weather
+import com.bumptech.glide.Glide
 import com.google.android.gms.common.api.Api
 import com.google.android.gms.common.api.Status
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -37,6 +43,7 @@ import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
+import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -44,18 +51,25 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
+import kotlin.math.roundToInt
 
-class HomeFragment : Fragment() , OnMapReadyCallback, GoogleMap.OnMapClickListener{
+class HomeFragment : Fragment() , OnMapReadyCallback, GoogleMap.OnMapClickListener {
     interface WeatherApiService {
         @GET("weather")
-        fun getWeather(@Query("q") city: String, @Query("appid") apiKey: String): Call<WeatherResponse>
+        fun getWeather(
+            @Query("lat") lat: Double,
+            @Query("lon") long: Double,
+            @Query("appid") apiKey: String
+        ): Call<WeatherResponse>
     }
+
     val CHANNEL_ID = "pickerChannel"
     private var googleMap: GoogleMap? = null
-    private val URL ="https://api.openweathermap.org/data/2.5/weather?q=lyon&appid=e3b787e83e7b983adeca31847414a20e"
-    private  val BASE_URL = "https://api.openweathermap.org/data/2.5/"
+    private val URL =
+        "https://api.openweathermap.org/data/2.5/weather?q=lyon&appid=e3b787e83e7b983adeca31847414a20e"
+    private val BASE_URL = "https://api.openweathermap.org/data/2.5/"
     private var notificationChannelCreated = false
-    private val TAG : String ="CHECK_RESPONSE"
+    private val TAG: String = "CHECK_RESPONSE"
     private var _binding: FragmentHomeBinding? = null
 
     // This property is only valid between onCreateView and
@@ -77,10 +91,12 @@ class HomeFragment : Fragment() , OnMapReadyCallback, GoogleMap.OnMapClickListen
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
-        val mapFragment = childFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment
+
+        val mapFragment =
+            childFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment
         mapFragment.getMapAsync { map ->
             googleMap = map
-            googleMap?.uiSettings?.isZoomControlsEnabled = true
+            //    googleMap?.uiSettings?.isZoomControlsEnabled = true
 
             // Activer la boussole
             googleMap?.uiSettings?.isCompassEnabled = true
@@ -89,7 +105,7 @@ class HomeFragment : Fragment() , OnMapReadyCallback, GoogleMap.OnMapClickListen
             googleMap?.uiSettings?.isMapToolbarEnabled = true
             googleMap?.setOnMapClickListener(this)
         }
-
+        binding.textView.visibility = View.GONE
         if (!Places.isInitialized()) {
             Places.initialize(
                 requireContext(),
@@ -105,32 +121,39 @@ class HomeFragment : Fragment() , OnMapReadyCallback, GoogleMap.OnMapClickListen
             listOf(Place.Field.LAT_LNG, Place.Field.NAME)
         )
 
-autocompleteFragment?.setOnPlaceSelectedListener(object : PlaceSelectionListener{
-    override fun onError(p0: Status) {
-        TODO("Not yet implemented")
-    }
+        autocompleteFragment?.setOnPlaceSelectedListener(object : PlaceSelectionListener {
+            override fun onError(p0: Status) {
+                TODO("Not yet implemented")
+            }
 
-    override fun onPlaceSelected(p0: Place) {
-     if(p0.latLng!=null){
-         val lating = p0.latLng
-         val cameraUpdate = CameraUpdateFactory.newLatLngZoom(lating, 15f)
-         googleMap?.moveCamera(cameraUpdate)
-         binding.textHome.text = lating!!.toString()
-         get()
+            override fun onPlaceSelected(p0: Place) {
+                if (p0.latLng != null) {
+                    val lating = p0.latLng
+                    val cameraUpdate = CameraUpdateFactory.newLatLngZoom(lating, 15f)
+                    googleMap?.moveCamera(cameraUpdate)
+                    binding.textHome.text = lating!!.toString()
+                    get(lating)
 
-     }
-    }
+                }
+            }
 
-})
+        })
 
         return root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Vérifier la connectivité réseau lorsque la vue est créée
+        checkNetworkConnectivity()
+
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 
-    fun get() {
+    fun get(lating: LatLng) {
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -138,15 +161,48 @@ autocompleteFragment?.setOnPlaceSelectedListener(object : PlaceSelectionListener
 
         val api = retrofit.create(WeatherApiService::class.java)
 
-        api.getWeather("lyon", "e3b787e83e7b983adeca31847414a20e")
+        api.getWeather(lating.latitude, lating.longitude, "e3b787e83e7b983adeca31847414a20e")
             .enqueue(object : Callback<WeatherResponse> {
-                override fun onResponse(call: Call<WeatherResponse>, response: Response<WeatherResponse>) {
+                override fun onResponse(
+                    call: Call<WeatherResponse>,
+                    response: Response<WeatherResponse>
+                ) {
                     if (response.isSuccessful) {
                         val weatherResponse = response.body()
                         weatherResponse?.let { response ->
+                            binding.nomVille.text =
+                                weatherResponse.name + " : " + weatherResponse.main?.temp?.minus(
+                                    273.15
+                                )?.roundToInt() + " °C"
+                            val uri = Uri.parse(
+                                "http://openweathermap.org/img/w/" + weatherResponse.weather?.get(0)?.icon + ".png"
+                            )
+                            Log.d("img", uri.toString())
+                            context?.let {
+                                val uri = Uri.parse(
+                                    "https://openweathermap.org/img/w/" + weatherResponse.weather?.get(
+                                        0
+                                    )?.icon + ".png"
+                                )
+                                Log.d("img", uri.toString())
+                                val imageView = binding.meteo
+                                context?.let {
+                                    if (imageView != null) {
+                                        Log.d("images", "pas null")
+                                        Glide.with(it)
+                                            .load(uri)
+                                            .into(imageView)
+                                    }
+                                }
+
+                            }
+
+                            binding.meteo.setImageURI(uri)
                             Log.d(TAG, "ville: ${response.name}")
                             Log.d(TAG, "coord: ${response.coord?.lon} et ${response.coord?.lat}")
-                            showWeatherPopup(weatherResponse);
+                            binding.textView.visibility = View.VISIBLE
+
+                            //showWeatherPopup(weatherResponse);
                         }
                     } else {
                         Log.e(TAG, "Failed to get weather data: ${response.code()}")
@@ -158,6 +214,7 @@ autocompleteFragment?.setOnPlaceSelectedListener(object : PlaceSelectionListener
                 }
             })
     }
+
     private fun showWeatherPopup(weatherResponse: WeatherResponse) {
         val dialogBuilder = AlertDialog.Builder(requireContext())
         val message = "Country: ${weatherResponse.sys?.country}\n" +
@@ -171,9 +228,11 @@ autocompleteFragment?.setOnPlaceSelectedListener(object : PlaceSelectionListener
         val dialog = dialogBuilder.create()
         dialog.show()
         if (!notificationChannelCreated) {
-            context?.let { createNotificationChannel(it)
+            context?.let {
+                createNotificationChannel(it)
 
-            Log.d("notif","pas null !")}
+                Log.d("notif", "pas null !")
+            }
             notificationChannelCreated = true
         }
 
@@ -196,7 +255,7 @@ autocompleteFragment?.setOnPlaceSelectedListener(object : PlaceSelectionListener
 
             // Check if the channel already exists
             if (notificationManager.getNotificationChannel(CHANNEL_ID) == null) {
-                Log.d("channel","pas null !")
+                Log.d("channel", "pas null !")
                 val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
                     description = descriptionText
                 }
@@ -221,7 +280,8 @@ autocompleteFragment?.setOnPlaceSelectedListener(object : PlaceSelectionListener
         val intent = Intent(requireContext(), HomeFragment::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
-        val pendingIntent: PendingIntent = PendingIntent.getActivity(requireContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent: PendingIntent =
+            PendingIntent.getActivity(requireContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE)
         builder.setContentIntent(pendingIntent)
 
         // Construire la notification
@@ -236,9 +296,36 @@ autocompleteFragment?.setOnPlaceSelectedListener(object : PlaceSelectionListener
     override fun onMapReady(p0: GoogleMap?) {
 
     }
+
     override fun onMapClick(point: LatLng) {
         val cameraUpdate = CameraUpdateFactory.newLatLngZoom(point, 10f)
         googleMap?.moveCamera(cameraUpdate)
     }
 
+
+
+    private fun checkNetworkConnectivity() {
+        val connectivityManager =
+            requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val network = connectivityManager.activeNetwork
+            val networkCapabilities = connectivityManager.getNetworkCapabilities(network)
+            if (networkCapabilities == null ||
+                !networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+            ) {
+                showNoInternetMessage()
+            }
+        } else {
+            val networkInfo = connectivityManager.activeNetworkInfo
+            if (networkInfo == null || !networkInfo.isConnected) {
+                showNoInternetMessage()
+
+            }
+        }
+    }
+
+    private fun showNoInternetMessage() {
+        Toast.makeText(requireContext(), "Pas de connexion Internet", Toast.LENGTH_LONG).show()
+    }
 }
