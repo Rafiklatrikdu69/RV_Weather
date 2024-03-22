@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">A palavra-passe não é suficientemente forte. Utilize, pelo menos, %1$d caráter e uma combinação de letras e números</item> <item quantity="other">A palavra-passe não é suficientemente forte. Utilize, pelo menos, %1$d caracteres e uma combinação de letras e números</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d nova notificação</item>
     <item quantity="other">%d novas notificações</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">Carateres introduzidos: %1$d de %2$d</string>
     <string name="character_counter_overflowed_content_description">Limite de carateres excedido: %1$d de %2$d</string>
     <string name="clear_text_end_icon_content_description">Limpar texto</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Erro</string>
-    <string name="exposed_dropdown_menu_content_description">Mostrar menu pendente</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Ativar</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">O %1$s não funciona enquanto não ativar os serviços do Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Ativar serviços do Google Play</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">Já tem uma conta</string>
     <string name="fui_welcome_back_idp_prompt">Já utilizou %1$s. Inicie sessão com %2$s para continuar.</string>
     <string name="fui_welcome_back_password_prompt_body">Já utilizou %1$s para iniciar sessão. Introduza a palavra-passe da conta em questão.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Ícone de caixa de diálogo</string>
     <string name="item_view_role_description">Separador</string>
     <string name="material_clock_toggle_content_description">Selecionar AM ou PM</string>

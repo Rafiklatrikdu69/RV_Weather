@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">La contraseña no es lo suficientemente segura. Usa %1$d carácter como mínimo y combina letras y números.</item> <item quantity="other">La contraseña no es lo suficientemente segura. Usa %1$d caracteres como mínimo y combina letras y números.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d notificación nueva</item>
     <item quantity="other">%d notificaciones nuevas</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">Caracteres introducidos: %1$d de %2$d</string>
     <string name="character_counter_overflowed_content_description">Límite de caracteres superado (%1$d de %2$d)</string>
     <string name="clear_text_end_icon_content_description">Borrar texto</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Error</string>
-    <string name="exposed_dropdown_menu_content_description">Mostrar menú desplegable</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Habilitar</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s no funcionará hasta que no habilites Servicios de Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Habilita Servicios de Google Play</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">Ya tienes una cuenta</string>
     <string name="fui_welcome_back_idp_prompt">Ya has usado %1$s. Para continuar, inicia sesión con %2$s.</string>
     <string name="fui_welcome_back_password_prompt_body">Ya has usado %1$s para iniciar sesión. Introduce la contraseña de esa cuenta.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Icono del cuadro de diálogo</string>
     <string name="item_view_role_description">Pestaña</string>
     <string name="material_clock_toggle_content_description">Selecciona AM o PM</string>

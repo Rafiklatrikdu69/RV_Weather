@@ -4,6 +4,7 @@ package com.bouchenna.rv_weather.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -24,12 +25,16 @@ public final class AppBarMainBinding implements ViewBinding {
   public final FloatingActionButton fab;
 
   @NonNull
+  public final ImageView menuBurgerImageView;
+
+  @NonNull
   public final Toolbar toolbar;
 
   private AppBarMainBinding(@NonNull CoordinatorLayout rootView, @NonNull FloatingActionButton fab,
-      @NonNull Toolbar toolbar) {
+      @NonNull ImageView menuBurgerImageView, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.fab = fab;
+    this.menuBurgerImageView = menuBurgerImageView;
     this.toolbar = toolbar;
   }
 
@@ -66,13 +71,19 @@ public final class AppBarMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.menuBurgerImageView;
+      ImageView menuBurgerImageView = ViewBindings.findChildViewById(rootView, id);
+      if (menuBurgerImageView == null) {
+        break missingId;
+      }
+
       id = R.id.toolbar;
       Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
       if (toolbar == null) {
         break missingId;
       }
 
-      return new AppBarMainBinding((CoordinatorLayout) rootView, fab, toolbar);
+      return new AppBarMainBinding((CoordinatorLayout) rootView, fab, menuBurgerImageView, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

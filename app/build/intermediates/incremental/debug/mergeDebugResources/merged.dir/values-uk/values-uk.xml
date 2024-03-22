@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Пароль недостатньо надійний. Введіть принаймні %1$d символ та комбінацію літер і цифр</item> <item quantity="few">Пароль недостатньо надійний. Введіть принаймні %1$d символи та комбінацію літер і цифр</item> <item quantity="many">Пароль недостатньо надійний. Введіть принаймні %1$d символів та комбінацію літер і цифр</item> <item quantity="other">Пароль недостатньо надійний. Введіть принаймні %1$d символу та комбінацію літер і цифр</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d нове сповіщення</item>
     <item quantity="few">%d нові сповіщення</item>
@@ -52,10 +49,6 @@
     <string name="character_counter_content_description">Введено символів: %1$d з %2$d</string>
     <string name="character_counter_overflowed_content_description">Перевищено ліміт символів: %1$d з %2$d</string>
     <string name="clear_text_end_icon_content_description">Видалити текст</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Помилка</string>
-    <string name="exposed_dropdown_menu_content_description">Показати спадне меню</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Увімкнути</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Додаток %1$s не працюватиме, якщо не ввімкнути сервіси Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Увімкнути сервіси Google Play</string>
@@ -171,7 +164,6 @@
     <string name="fui_welcome_back_idp_header">У вас уже є обліковий запис</string>
     <string name="fui_welcome_back_idp_prompt">Ви вже використовували електронну адресу %1$s. Щоб продовжити, увійдіть в обліковий запис %2$s.</string>
     <string name="fui_welcome_back_password_prompt_body">Ви вже використовували електронну адресу %1$s для входу. Введіть пароль для цього облікового запису.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Значок вікна</string>
     <string name="item_view_role_description">Вкладка</string>
     <string name="material_clock_toggle_content_description">Виберіть ДП чи ПП</string>

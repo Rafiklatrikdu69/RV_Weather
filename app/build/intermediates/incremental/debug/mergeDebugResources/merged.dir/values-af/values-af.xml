@@ -46,10 +46,6 @@
     <string name="character_counter_content_description">Karakters ingevoer: %1$d van %2$d</string>
     <string name="character_counter_overflowed_content_description">Karakterlimiet oorskry %1$d van %2$d</string>
     <string name="clear_text_end_icon_content_description">Vee teks uit</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Fout</string>
-    <string name="exposed_dropdown_menu_content_description">Wys aftrekkieslys</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aktiveer</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s sal nie werk nie tensy jy Google Play Dienste aktiveer.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Aktiveer Google Play Dienste</string>
@@ -74,7 +70,6 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopieer skakel"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Maak in blaaier oop"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Deel skakel"</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Dialoogikoon</string>
     <string name="item_view_role_description">Oortjie</string>
     <string name="material_clock_toggle_content_description">Kies vm. of nm.</string>

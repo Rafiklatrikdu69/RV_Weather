@@ -15,8 +15,6 @@
         <item name="android:keyboardNavigationCluster">true</item>
     </style>
     <style name="Base.Widget.AppCompat.Toolbar" parent="Base.V26.Widget.AppCompat.Toolbar"/>
-<<<<<<< Updated upstream
-=======
     <style name="FirebaseUI.TextInputEditText.EmailField">
         <item name="android:autofillHints">emailAddress</item>
         <item name="android:inputType">textEmailAddress</item>
@@ -33,5 +31,4 @@
         <item name="android:autofillHints">phone</item>
         <item name="android:inputType">phone</item>
     </style>
->>>>>>> Stashed changes
 </resources>

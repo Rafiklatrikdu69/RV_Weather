@@ -1,15 +1,12 @@
 package com.bouchenna.rv_weather
 
+import com.google.firebase.firestore.GeoPoint
+
 data class Localisation(
 
     var nom: String,
-    var lat: Double,
-    var long: Double,
+    var coord: GeoPoint,
     var contry: String,
-<<<<<<< Updated upstream
-    var state: String
-=======
     var state: String,
     var userId: String
->>>>>>> Stashed changes
 )

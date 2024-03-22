@@ -46,10 +46,6 @@
     <string name="character_counter_content_description">შეყვანილია %2$d-დან %1$d სიმბოლო</string>
     <string name="character_counter_overflowed_content_description">გადაჭარბებულია სიმბოლოთა ლიმიტი (%2$d-დან %1$d)</string>
     <string name="clear_text_end_icon_content_description">ტექსტის გასუფთავება</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">შეცდომა</string>
-    <string name="exposed_dropdown_menu_content_description">ჩამოსაშლელი მენიუს ჩვენება</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">ჩართვა</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s ვერ იმუშავებს Google Play Services-ის ჩართვამდე.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play Services-ის ჩართვა</string>
@@ -74,7 +70,6 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"ბმულის კოპირება"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"ბრაუზერში გახსნა"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"ბმულის გაზიარება"</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">დიალოგის ხატულა</string>
     <string name="item_view_role_description">ჩანართი</string>
     <string name="material_clock_toggle_content_description">აირჩიეთ AM ან PM</string>

@@ -46,10 +46,6 @@
     <string name="character_counter_content_description">Izinhlamvu ezifakiwe ezingu-%1$d zokungu-%2$d</string>
     <string name="character_counter_overflowed_content_description">Umkhawulo wezinhlamvu udlule u-%1$d kokungu-%2$d</string>
     <string name="clear_text_end_icon_content_description">Sula umbhalo</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Iphutha</string>
-    <string name="exposed_dropdown_menu_content_description">Bonisa imenyu yokudonsela phansi</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Nika amandla</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">I-%1$s ngeke isebenze ngaphandle kokuthi unike amandla amasevisi we-Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Nika amandla amasevisi we-Google Play</string>
@@ -74,7 +70,6 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopisha isixhumanisi"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Vula kusiphequluli"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Yabelana ngesixhumanisi"</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Isithonjana sebhokisi</string>
     <string name="item_view_role_description">Ithebhu</string>
     <string name="material_clock_toggle_content_description">Khetha u-AM noma u-PM</string>

@@ -48,10 +48,6 @@
     <string name="character_counter_content_description">Уведзена сімвалаў: %1$d з %2$d</string>
     <string name="character_counter_overflowed_content_description">Абмежаванне колькасці сімвалаў перавышана: %1$d з %2$d</string>
     <string name="clear_text_end_icon_content_description">Ачысціць тэкст</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Памылка</string>
-    <string name="exposed_dropdown_menu_content_description">Паказаць выпадное меню</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Уключыць</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s не будзе працаваць, пакуль вы не ўключыце службы Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Уключыць службы Google Play</string>
@@ -76,7 +72,6 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Скапіраваць спасылку"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Адкрыць у браўзеры"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Абагуліць спасылку"</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Значок дыялогавага акна</string>
     <string name="item_view_role_description">Укладка</string>
     <string name="material_clock_toggle_content_description">Выберыце AM (да паўдня) або PM (пасля паўдня)</string>

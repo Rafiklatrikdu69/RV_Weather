@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Heslo nie je dostatočne silné. Použite aspoň %1$d znak a kombináciu písmen a čísel</item> <item quantity="few">Heslo nie je dostatočne silné. Použite aspoň %1$d znaky a kombináciu písmen a čísel</item> <item quantity="many">Heslo nie je dostatočne silné. Použite aspoň %1$d znaku a kombináciu písmen a čísel</item> <item quantity="other">Heslo nie je dostatočne silné. Použite aspoň %1$d znakov a kombináciu písmen a čísel</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d nové upozornenie</item>
     <item quantity="few">%d nové upozornenia</item>
@@ -52,10 +49,6 @@
     <string name="character_counter_content_description">Zadané znaky: %1$d z %2$d</string>
     <string name="character_counter_overflowed_content_description">Bol prekročený povolený počet znakov (%1$d z %2$d)</string>
     <string name="clear_text_end_icon_content_description">Vymazať text</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Chyba</string>
-    <string name="exposed_dropdown_menu_content_description">Zobraziť rozbaľovaciu ponuku</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Povoliť</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Aplikácia %1$s bude fungovať až po povolení služieb Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Povoliť služby Google Play</string>
@@ -171,7 +164,6 @@
     <string name="fui_welcome_back_idp_header">Už máte účet</string>
     <string name="fui_welcome_back_idp_prompt">Už ste použili adresu %1$s. Ak chcete pokračovať, prihláste sa pomocou účtu %2$s.</string>
     <string name="fui_welcome_back_password_prompt_body">Na prihlásenie ste už použili adresu %1$s. Zadajte svoje heslo pre daný účet.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Ikona dialógového okna</string>
     <string name="item_view_role_description">Tabulátor</string>
     <string name="material_clock_toggle_content_description">Vyberte AM alebo PM</string>

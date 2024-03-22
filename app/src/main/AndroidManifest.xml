@@ -15,32 +15,25 @@
         android:theme="@style/Theme.RV_weather"
         tools:targetApi="31">
         <activity
-<<<<<<< Updated upstream
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.RV_weather.NoActionBar">
-=======
+            android:name=".MenuCustomActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".ConnexionActivity"
             android:exported="true">
->>>>>>> Stashed changes
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< Updated upstream
-=======
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.RV_weather.NoActionBar"></activity>
->>>>>>> Stashed changes
+            android:theme="@style/Theme.RV_weather.NoActionBar" />
     </application>
 
 </manifest>

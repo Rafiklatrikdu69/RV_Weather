@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Ο κωδικός πρόσβασης δεν είναι αρκετά ισχυρός. Χρησιμοποιήστε τουλάχιστον %1$d χαρακτήρα και έναν συνδυασμό γραμμάτων και αριθμών</item> <item quantity="other">Ο κωδικός πρόσβασης δεν είναι αρκετά ισχυρός. Χρησιμοποιήστε τουλάχιστον %1$d χαρακτήρες και έναν συνδυασμό γραμμάτων και αριθμών</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d νέα ειδοποίηση</item>
     <item quantity="other">%d νέες ειδοποιήσεις</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">Εισήχθησαν %1$d από %2$d χαρακτήρες</string>
     <string name="character_counter_overflowed_content_description">Υπέρβαση ορίου χαρακτήρων %1$d από %2$d</string>
     <string name="clear_text_end_icon_content_description">Διαγραφή κειμένου</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Σφάλμα</string>
-    <string name="exposed_dropdown_menu_content_description">Εμφάνιση αναπτυσσόμενου μενού</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Ενεργοποίηση</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Η εφαρμογή %1$s δεν θα λειτουργήσει εάν δεν έχετε ενεργοποιήσει τις υπηρεσίες Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Ενεργοποίηση υπηρεσιών Google Play</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">Έχετε ήδη λογαριασμό</string>
     <string name="fui_welcome_back_idp_prompt">Έχετε ήδη χρησιμοποιήσει τη διεύθυνση %1$s. Συνδεθείτε μέσω %2$s για να συνεχίσετε.</string>
     <string name="fui_welcome_back_password_prompt_body">Έχετε ήδη χρησιμοποιήσει τη διεύθυνση %1$s για να συνδεθείτε. Εισαγάγετε τον κωδικό πρόσβασής σας για αυτόν τον λογαριασμό.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Εικονίδιο παραθύρου διαλόγου</string>
     <string name="item_view_role_description">Καρτέλα</string>
     <string name="material_clock_toggle_content_description">Επιλέξτε π.μ. ή μ.μ.</string>

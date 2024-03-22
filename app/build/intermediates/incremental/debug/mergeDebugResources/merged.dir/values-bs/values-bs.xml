@@ -47,10 +47,6 @@
     <string name="character_counter_content_description">Uneseno znakova: %1$d od %2$d</string>
     <string name="character_counter_overflowed_content_description">Ograničenje broja znakova premašuje %1$d od %2$d</string>
     <string name="clear_text_end_icon_content_description">Obriši tekst</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Greška</string>
-    <string name="exposed_dropdown_menu_content_description">Prikaži padajući meni</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Omogući</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Aplikacija %1$s neće raditi ako ne omogućite Google Play usluge.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Omogućite Google Play usluge</string>
@@ -75,7 +71,6 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopiraj link"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Otvori u pregledniku"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Dijeli link"</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">ikona dijaloškog okvira</string>
     <string name="item_view_role_description">Kartica</string>
     <string name="material_clock_toggle_content_description">Odaberite prijepodne ili poslijepodne</string>

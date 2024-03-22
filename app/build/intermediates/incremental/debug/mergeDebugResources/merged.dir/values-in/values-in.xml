@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Sandi tidak cukup kuat. Gunakan minimal %1$d karakter dan merupakan kombinasi huruf dan angka</item> <item quantity="other">Sandi tidak cukup kuat. Gunakan minimal %1$d karakter dan merupakan kombinasi huruf dan angka</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d notifikasi baru</item>
     <item quantity="other">%d notifikasi baru</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">Karakter yang dimasukkan %1$d dari %2$d</string>
     <string name="character_counter_overflowed_content_description">Melebihi batas karakter %1$d dari %2$d</string>
     <string name="clear_text_end_icon_content_description">Menghapus teks</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Error</string>
-    <string name="exposed_dropdown_menu_content_description">Tampilkan menu dropdown</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aktifkan</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s tidak akan berfungsi jika layanan Google Play tidak diaktifkan.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Aktifkan layanan Google Play</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">Anda sudah memiliki akun</string>
     <string name="fui_welcome_back_idp_prompt">Anda telah menggunakan %1$s. Login dengan %2$s untuk melanjutkan.</string>
     <string name="fui_welcome_back_password_prompt_body">Anda telah menggunakan %1$s untuk login. Masukkan sandi untuk akun tersebut.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Ikon Dialog</string>
     <string name="item_view_role_description">Tab</string>
     <string name="material_clock_toggle_content_description">Pilih AM atau PM</string>

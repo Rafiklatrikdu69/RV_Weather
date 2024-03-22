@@ -8,13 +8,10 @@
         android:minSdkVersion="28"
         android:targetSdkVersion="34" />
 
-<<<<<<< Updated upstream
-=======
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
->>>>>>> Stashed changes
     <permission
         android:name="com.bouchenna.rv_weather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -35,26 +32,20 @@
         android:testOnly="true"
         android:theme="@style/Theme.RV_weather" >
         <activity
-<<<<<<< Updated upstream
-            android:name="com.bouchenna.rv_weather.MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.RV_weather.NoActionBar" >
-=======
+            android:name="com.bouchenna.rv_weather.MenuCustomActivity"
+            android:exported="false" />
+        <activity
             android:name="com.bouchenna.rv_weather.RegisterActivity"
             android:exported="false" />
         <activity
             android:name="com.bouchenna.rv_weather.ConnexionActivity"
             android:exported="true" >
->>>>>>> Stashed changes
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< Updated upstream
-=======
         <activity
             android:name="com.bouchenna.rv_weather.MainActivity"
             android:exported="false"
@@ -144,7 +135,6 @@
                 <data android:scheme="@string/facebook_login_protocol_scheme" />
             </intent-filter>
         </activity>
->>>>>>> Stashed changes
 
         <provider
             android:name="com.firebase.ui.auth.data.client.AuthUiInitProvider"
@@ -166,8 +156,6 @@
                 android:value="androidx.startup" />
         </provider>
 
-<<<<<<< Updated upstream
-=======
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
@@ -256,7 +244,6 @@
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
->>>>>>> Stashed changes
         <uses-library
             android:name="androidx.window.extensions"
             android:required="false" />

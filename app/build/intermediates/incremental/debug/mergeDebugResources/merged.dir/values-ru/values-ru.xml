@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Пароль должен состоять из букв и цифр и содержать не меньше %1$d символа.</item> <item quantity="few">Пароль должен состоять из букв и цифр и содержать не меньше %1$d символов.</item> <item quantity="many">Пароль должен состоять из букв и цифр и содержать не меньше %1$d символов.</item> <item quantity="other">Пароль должен состоять из букв и цифр и содержать не меньше %1$d символа.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d новое уведомление</item>
     <item quantity="few">%d новых уведомления</item>
@@ -52,10 +49,6 @@
     <string name="character_counter_content_description">Введено символов: %1$d из %2$d</string>
     <string name="character_counter_overflowed_content_description">Превышено ограничение на количество символов (%1$d из %2$d)</string>
     <string name="clear_text_end_icon_content_description">Очистить текстовое поле</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Ошибка</string>
-    <string name="exposed_dropdown_menu_content_description">Показать раскрывающееся меню</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Включить</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Для работы приложения \"%1$s\" требуется включить сервисы Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Включите сервисы Google Play</string>
@@ -171,7 +164,6 @@
     <string name="fui_welcome_back_idp_header">У вас уже есть аккаунт</string>
     <string name="fui_welcome_back_idp_prompt">Вы уже использовали адрес %1$s. Войдите через аккаунт %2$s.</string>
     <string name="fui_welcome_back_password_prompt_body">Вы уже использовали адрес %1$s. Введите пароль для этого аккаунта.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Значок диалогового окна</string>
     <string name="item_view_role_description">Вкладка</string>
     <string name="material_clock_toggle_content_description">Выберите AM (до полудня) или PM (после полудня)</string>

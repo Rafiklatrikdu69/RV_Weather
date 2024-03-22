@@ -46,10 +46,6 @@
     <string name="character_counter_content_description">စာလုံးရေ %2$d တွင် %1$d ထည့်သွင်းထားသည်</string>
     <string name="character_counter_overflowed_content_description">စာလုံးရေအကန့်အသတ် %2$d လုံးတွင် %1$d လုံးကျော်နေသည်</string>
     <string name="clear_text_end_icon_content_description">စာသား ဖယ်ရှားရန်</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">အမှား</string>
-    <string name="exposed_dropdown_menu_content_description">ဆွဲချမီနူးကို ပြရန်</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">ဖွင့်ရန်</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play ဝန်ဆောင်မှုများကို မဖွင့်သ၍ %1$s သည်အလုပ်လုပ်မည်မဟုတ်ပါ။</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play ဝန်ဆောင်မှုများ ဖွင့်ရန်</string>
@@ -74,7 +70,6 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"လင့်ခ်ကို ကူးယူရန်"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"ဘရောင်ဇာတွင် ဖွင့်ရန်"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"လင့်ခ်ကို မျှဝေရန်"</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">ဒိုင်ယာလော့ခ် သင်္ကေတ</string>
     <string name="item_view_role_description">တဘ်</string>
     <string name="material_clock_toggle_content_description">AM (သို့) PM ရွေးရန်</string>

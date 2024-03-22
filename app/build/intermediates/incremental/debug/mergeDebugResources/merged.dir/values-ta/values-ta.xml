@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">கடவுச்சொல் வலுவானதாக இல்லை. குறைந்தது %1$d எழுத்துக்குறியும், எழுத்துகளும் எண்களும் கலந்த கலவையும் இருக்க வேண்டும்</item> <item quantity="other">கடவுச்சொல் வலுவானதாக இல்லை. குறைந்தது %1$d எழுத்துக்குறிகளும், எழுத்துகளும் எண்களும் கலந்த கலவையும் இருக்க வேண்டும்</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d புதிய அறிவிப்பு</item>
     <item quantity="other">%d புதிய அறிவிப்புகள்</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">%2$d இல் %1$d எழுத்துகள் உள்ளிடப்பட்டுள்ளன</string>
     <string name="character_counter_overflowed_content_description">%2$d இல் %1$d எழுத்து வரம்பு மீறப்பட்டது</string>
     <string name="clear_text_end_icon_content_description">உரையை அழிக்கும்</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">பிழை</string>
-    <string name="exposed_dropdown_menu_content_description">கீழ் தோன்றல் மெனுவைக் காட்டும் பட்டன்</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">இயக்கு</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play சேவைகளை இயக்கினால் மட்டுமே, %1$s செயல்படும்.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play சேவைகளை இயக்கவும்</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">ஏற்கனவே உங்களிடம் கணக்கு உள்ளது</string>
     <string name="fui_welcome_back_idp_prompt">ஏற்கனவே %1$sஐப் பயன்படுத்தியுள்ளீர்கள். தொடர, %2$s மூலம் உள்நுழையவும்.</string>
     <string name="fui_welcome_back_password_prompt_body">ஏற்கனவே %1$sஐப் பயன்படுத்தி உள்நுழைந்திருக்கிறீர்கள். அந்தக் கணக்கிற்கான கடவுச்சொல்லை உள்ளிடவும்.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">உரையாடல் ஐகான்</string>
     <string name="item_view_role_description">தாவல்</string>
     <string name="material_clock_toggle_content_description">AM அல்லது PMமைத் தேர்ந்தெடுக்க உதவும்</string>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Password not strong enough. Use at least %1$d character and a mix of letters and numbers</item> <item quantity="other">Password not strong enough. Use at least %1$d characters and a mix of letters and numbers</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d new notification</item>
     <item quantity="other">%d new notifications</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Error</string>
-    <string name="exposed_dropdown_menu_content_description">Show drop-down menu</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">You already have an account</string>
     <string name="fui_welcome_back_idp_prompt">You\'ve already used %1$s. Sign in with %2$s to continue.</string>
     <string name="fui_welcome_back_password_prompt_body">You\'ve already used %1$s to sign in. Enter your password for that account.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Dialogue Icon</string>
     <string name="item_view_role_description">Tab</string>
     <string name="material_clock_toggle_content_description">Select a.m. or p.m.</string>

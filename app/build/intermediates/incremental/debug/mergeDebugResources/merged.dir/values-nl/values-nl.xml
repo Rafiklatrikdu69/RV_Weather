@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Uw wachtwoord is niet sterk genoeg. Gebruik ten minste %1$d teken en een combinatie van letters en cijfers.</item> <item quantity="other">Uw wachtwoord is niet sterk genoeg. Gebruik ten minste %1$d tekens en een combinatie van letters en cijfers.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d nieuwe melding</item>
     <item quantity="other">%d nieuwe meldingen</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">%1$d van %2$d tekens opgegeven</string>
     <string name="character_counter_overflowed_content_description">Tekenlimiet heeft %1$d van %2$d overschreden</string>
     <string name="clear_text_end_icon_content_description">Tekst wissen</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Fout</string>
-    <string name="exposed_dropdown_menu_content_description">Dropdownmenu tonen</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aanzetten</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s werkt niet, tenzij je Google Play-services inschakelt.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play-services aanzetten</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">U heeft al een account</string>
     <string name="fui_welcome_back_idp_prompt">U heeft %1$s al gebruikt. Log in met %2$s om verder te gaan.</string>
     <string name="fui_welcome_back_password_prompt_body">U heeft al ingelogd met %1$s. Voer uw wachtwoord in voor dit account.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Icoon voor dialoogvenster</string>
     <string name="item_view_role_description">Tabblad</string>
     <string name="material_clock_toggle_content_description">Selecteer a.m. of p.m.</string>

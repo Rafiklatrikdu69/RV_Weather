@@ -46,10 +46,6 @@
     <string name="character_counter_content_description">Umeweka herufi %1$d kati ya %2$d</string>
     <string name="character_counter_overflowed_content_description">Umepitisha idadi ya juu ya herufi %1$d kati ya %2$d</string>
     <string name="clear_text_end_icon_content_description">Futa maandishi</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Hitilafu</string>
-    <string name="exposed_dropdown_menu_content_description">Onyesha menyu kunjuzi</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Washa</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s haitafanya kazi isipokuwa uwashe huduma za Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Washa huduma za Google Play</string>
@@ -74,7 +70,6 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Nakili kiungo"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Fungua katika kivinjari"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Shiriki kiungo"</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Aikoni ya Kidirisha</string>
     <string name="item_view_role_description">Kichupo</string>
     <string name="material_clock_toggle_content_description">Chagua AM au PM</string>

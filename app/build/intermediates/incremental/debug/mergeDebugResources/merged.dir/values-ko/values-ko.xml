@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">안전한 비밀번호가 아닙니다. 길이가 %1$d자 이상이고 문자와 숫자가 조합되어야 합니다.</item> <item quantity="other">안전한 비밀번호가 아닙니다. 길이가 %1$d자 이상이고 문자와 숫자가 조합되어야 합니다.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">새 알림 %d개</item>
     <item quantity="other">새 알림 %d개</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">입력된 글자 %1$d/%2$d</string>
     <string name="character_counter_overflowed_content_description">글자 수 제한이 초과되었습니다(%1$d/%2$d).</string>
     <string name="clear_text_end_icon_content_description">텍스트 삭제</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">오류</string>
-    <string name="exposed_dropdown_menu_content_description">드롭다운 메뉴 표시</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">사용 설정</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play 서비스를 사용하도록 설정해야 %1$s이(가) 작동합니다.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play 서비스 사용</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">계정이 이미 있음</string>
     <string name="fui_welcome_back_idp_prompt">%1$s을(를) 이미 사용하고 있습니다. 계속하려면 %2$s(으)로 로그인하세요.</string>
     <string name="fui_welcome_back_password_prompt_body">이미 %1$s을(를) 사용하여 로그인했습니다. 해당 계정의 비밀번호를 입력하세요.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">대화상자 아이콘</string>
     <string name="item_view_role_description">탭</string>
     <string name="material_clock_toggle_content_description">오전 또는 오후를 선택하세요.</string>

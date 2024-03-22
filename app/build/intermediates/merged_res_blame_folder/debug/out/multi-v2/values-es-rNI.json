@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-56:/values-es-rNI/values-es-rNI.xml",
+            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-59:/values-es-rNI/values-es-rNI.xml",
             "map": [
                 {
                     "source": "C:\\Users\\valen\\.gradle\\caches\\transforms-3\\3a431d20c7f4fbedfa0954f444948548\\transformed\\firebase-ui-auth-7.2.0\\res\\values-es-rNI\\values-es-rNI.xml",

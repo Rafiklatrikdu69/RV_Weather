@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">La password non è abbastanza efficace. Utilizza almeno %1$d carattere e una combinazione di lettere e numeri.</item> <item quantity="other">La password non è abbastanza efficace. Utilizza almeno %1$d caratteri e una combinazione di lettere e numeri.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d nuova notifica</item>
     <item quantity="other">%d nuove notifiche</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">%1$d caratteri inserirti su %2$d</string>
     <string name="character_counter_overflowed_content_description">Sono presenti %2$d caratteri in più rispetto al limite di %1$d</string>
     <string name="clear_text_end_icon_content_description">Cancella testo</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Errore</string>
-    <string name="exposed_dropdown_menu_content_description">Mostra il menu a discesa</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Attiva</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s non funzionerà se non attivi Google Play Services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Attiva Google Play Services</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">Hai già un account</string>
     <string name="fui_welcome_back_idp_prompt">Hai già utilizzato %1$s. Accedi con %2$s per continuare.</string>
     <string name="fui_welcome_back_password_prompt_body">Hai già utilizzato %1$s per accedere. Inserisci la password di questo account.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Icona della finestra di dialogo</string>
     <string name="item_view_role_description">Scheda</string>
     <string name="material_clock_toggle_content_description">Seleziona AM o PM</string>

@@ -46,10 +46,6 @@
     <string name="character_counter_content_description">%2$d ичинен %1$d символ киргизилди</string>
     <string name="character_counter_overflowed_content_description">Символдордун саны коюлган %2$d чегинен %1$d символго ашып кетти</string>
     <string name="clear_text_end_icon_content_description">Текстти тазалоо</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Ката</string>
-    <string name="exposed_dropdown_menu_content_description">Түрүлмө менюну көрсөтүү</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Иштетүү</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play кызматтарын иштетмейиңизче %1$s иштебейт.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play кызматтарын иштетүү</string>
@@ -74,7 +70,6 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Шилтемени көчүрүү"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Серепчиден ачуу"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Шилтемени бөлүшүү"</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Диалог сүрөтчөсү</string>
     <string name="item_view_role_description">Өтмөк</string>
     <string name="material_clock_toggle_content_description">Тандоо: AM же PM</string>

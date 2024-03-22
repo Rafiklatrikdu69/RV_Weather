@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">પાસવર્ડ પૂરતો સશક્ત નથી. ઓછામાં ઓછા %1$d અક્ષર અને વર્ણ તથા સંખ્યાઓના સંયોજનનો ઉપયોગ કરો</item> <item quantity="other">પાસવર્ડ પૂરતો સશક્ત નથી. ઓછામાં ઓછા %1$d અક્ષર અને વર્ણ તથા સંખ્યાઓના સંયોજનનો ઉપયોગ કરો</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d નવું નોટિફિકેશન</item>
     <item quantity="other">%d નવા નોટિફિકેશન</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">%2$dમાંથી %1$d અક્ષરો દાખલ કર્યા</string>
     <string name="character_counter_overflowed_content_description">%2$dમાંથી %1$dની વર્ણ મર્યાદા ઓળંગાઈ ગઈ છે</string>
     <string name="clear_text_end_icon_content_description">ટેક્સ્ટ સાફ કરો</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">ભૂલ</string>
-    <string name="exposed_dropdown_menu_content_description">ડ્રૉપડાઉન મેનૂ બતાવો</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">સક્ષમ કરો</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">તમે Google Play સેવાઓ સક્ષમ કરશો નહીં ત્યાં સુધી %1$s કાર્ય કરશે નહીં.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play સેવાઓ સક્ષમ કરો</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">તમારી પાસે પહેલેથી જ એક એકાઉન્ટ છે</string>
     <string name="fui_welcome_back_idp_prompt">તમે પહેલાંથી જ %1$sનો ઉપયોગ કરી લીધો છે. આગળ વધવા માટે %2$s વડે સાઇન ઇન કરો.</string>
     <string name="fui_welcome_back_password_prompt_body">તમે સાઇન ઇન કરવા માટે પહેલેથી %1$sનો ઉપયોગ કરી લીધો છે. તે એકાઉન્ટ માટેનો તમારો પાસવર્ડ દાખલ કરો.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">સંવાદનું આઇકન</string>
     <string name="item_view_role_description">ટૅબ</string>
     <string name="material_clock_toggle_content_description">AM અથવા PM પસંદ કરો</string>

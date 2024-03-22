@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color principal_blue
 color purple_200
 color purple_500
 color purple_700
@@ -14,31 +15,31 @@ dimen nav_header_height
 dimen nav_header_vertical_spacing
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_manu_add
+drawable ic_menu_burger
 drawable ic_menu_camera
 drawable ic_menu_gallery
 drawable ic_menu_slideshow
 drawable side_nav_bar
 id action_settings
+id activityMainDrawerMenuLayoutInclude
+id activityMainHeader
 id app_bar_main
-<<<<<<< Updated upstream
-=======
 id button
 id buttonConnexion
 id buttonDeconnexion
 id buttonInscription
->>>>>>> Stashed changes
 id drawer_layout
 id fab
-id imageView
+id header
+id menuBurgerImageView
 id mobile_navigation
+id nav_custom_layout
 id nav_gallery
 id nav_home
 id nav_host_fragment_content_main
 id nav_slideshow
-id nav_view
-<<<<<<< Updated upstream
-id textView
-=======
+id recyclerViewMenu
 id textInputEditTextMdp
 id textInputEditTextMdpInscription
 id textInputEditTextPseudo
@@ -54,11 +55,12 @@ id textViewRafik
 id textViewToConnection
 id textViewToInscription
 id textViewValentin
->>>>>>> Stashed changes
 id text_gallery
 id text_home
 id text_slideshow
+id titleTextView
 id toolbar
+layout activity_connexion
 layout activity_main
 layout activity_register
 layout app_bar_main
@@ -66,6 +68,8 @@ layout content_main
 layout fragment_gallery
 layout fragment_home
 layout fragment_slideshow
+layout item_layout
+layout menu_custom
 layout nav_header_main
 menu activity_main_drawer
 menu main
@@ -74,15 +78,12 @@ mipmap ic_launcher_round
 navigation mobile_navigation
 string action_settings
 string app_name
-<<<<<<< Updated upstream
-=======
 string default_web_client_id
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
->>>>>>> Stashed changes
 string menu_gallery
 string menu_home
 string menu_slideshow
@@ -91,9 +92,11 @@ string nav_header_subtitle
 string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
+string project_id
 style Theme.RV_weather
 style Theme.RV_weather.AppBarOverlay
 style Theme.RV_weather.NoActionBar
 style Theme.RV_weather.PopupOverlay
+style principal_Blue
 xml backup_rules
 xml data_extraction_rules

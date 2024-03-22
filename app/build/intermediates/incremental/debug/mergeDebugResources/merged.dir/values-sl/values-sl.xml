@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Geslo ni dovolj zapleteno. Uporabite vsaj %1$d znak in kombinacijo črk ter številk.</item> <item quantity="two">Geslo ni dovolj zapleteno. Uporabite vsaj %1$d znaka in kombinacijo črk ter številk.</item> <item quantity="few">Geslo ni dovolj zapleteno. Uporabite vsaj %1$d znake in kombinacijo črk ter številk.</item> <item quantity="other">Geslo ni dovolj zapleteno. Uporabite vsaj %1$d znakov in kombinacijo črk ter številk.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d novo obvestilo</item>
     <item quantity="two">%d novi obvestili</item>
@@ -52,10 +49,6 @@
     <string name="character_counter_content_description">Število vnesenih znakov je %1$d od %2$d</string>
     <string name="character_counter_overflowed_content_description">Omejitev števila znakov je presegla %1$d od %2$d</string>
     <string name="clear_text_end_icon_content_description">Izbris besedila</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Napaka</string>
-    <string name="exposed_dropdown_menu_content_description">Prikaz spustnega menija</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Omogoči</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Aplikacija %1$s ne bo delovala, če ne omogočite storitev Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Omogočanje storitev Google Play</string>
@@ -171,7 +164,6 @@
     <string name="fui_welcome_back_idp_header">Račun že imate</string>
     <string name="fui_welcome_back_idp_prompt">E-poštni naslov %1$s ste že uporabili. Če želite nadaljevati, se prijavite z računom za %2$s.</string>
     <string name="fui_welcome_back_password_prompt_body">E-poštni naslov %1$s ste že uporabili za prijavo. Vnesite geslo za ta račun.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Ikona pogovornega okna</string>
     <string name="item_view_role_description">Zavihek</string>
     <string name="material_clock_toggle_content_description">Izberite dopoldanski ali popoldanski čas.</string>

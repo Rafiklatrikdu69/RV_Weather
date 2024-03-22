@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Лозинка није довољно јака. Употребите бар %1$d знак, уз комбинацију бројева и слова</item> <item quantity="few">Лозинка није довољно јака. Употребите бар %1$d знака, уз комбинацију бројева и слова</item> <item quantity="other">Лозинка није довољно јака. Употребите бар %1$d знакова, уз комбинацију бројева и слова</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d ново обавештење</item>
     <item quantity="few">%d нова обавештења</item>
@@ -51,10 +48,6 @@
     <string name="character_counter_content_description">Унети знакови: %1$d од %2$d</string>
     <string name="character_counter_overflowed_content_description">Прекорачено је ограничење броја знакова: %1$d од %2$d</string>
     <string name="clear_text_end_icon_content_description">Обриши текст</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Грешка</string>
-    <string name="exposed_dropdown_menu_content_description">Прикажи падајући мени</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Омогући</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s неће функционисати ако не омогућите Google Play услуге.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Омогућите Google Play услуге</string>
@@ -170,7 +163,6 @@
     <string name="fui_welcome_back_idp_header">Већ имате налог</string>
     <string name="fui_welcome_back_idp_prompt">Већ сте користили адресу %1$s. Пријавите се преко %2$s-а да бисте наставили.</string>
     <string name="fui_welcome_back_password_prompt_body">Већ сте користили адресу %1$s за пријављивање. Унесите лозинку за тај налог.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Икона дијалога</string>
     <string name="item_view_role_description">Картица</string>
     <string name="material_clock_toggle_content_description">Изаберите пре подне или по подне</string>

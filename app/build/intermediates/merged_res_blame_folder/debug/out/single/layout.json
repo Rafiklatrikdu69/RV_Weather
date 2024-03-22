@@ -1,67 +1,46 @@
 [
     {
-<<<<<<< Updated upstream
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-47:/layout/nav_header_main.xml",
-        "source": "com.bouchenna.rv_weather.app-main-50:/layout/nav_header_main.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/activity_register.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/activity_register.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-47:/layout/fragment_gallery.xml",
-        "source": "com.bouchenna.rv_weather.app-main-50:/layout/fragment_gallery.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/fragment_gallery.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/fragment_gallery.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-47:/layout/content_main.xml",
-        "source": "com.bouchenna.rv_weather.app-main-50:/layout/content_main.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/activity_main.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/activity_main.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-47:/layout/app_bar_main.xml",
-        "source": "com.bouchenna.rv_weather.app-main-50:/layout/app_bar_main.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/content_main.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/content_main.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-47:/layout/fragment_home.xml",
-        "source": "com.bouchenna.rv_weather.app-main-50:/layout/fragment_home.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/item_layout.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/item_layout.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-47:/layout/activity_main.xml",
-        "source": "com.bouchenna.rv_weather.app-main-50:/layout/activity_main.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/app_bar_main.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/app_bar_main.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-47:/layout/fragment_slideshow.xml",
-        "source": "com.bouchenna.rv_weather.app-main-50:/layout/fragment_slideshow.xml"
-=======
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-57:/layout/activity_register.xml",
-        "source": "com.bouchenna.rv_weather.app-main-60:/layout/activity_register.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/menu_custom.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/menu_custom.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-57:/layout/fragment_gallery.xml",
-        "source": "com.bouchenna.rv_weather.app-main-60:/layout/fragment_gallery.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/nav_header_main.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/nav_header_main.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-57:/layout/nav_header_main.xml",
-        "source": "com.bouchenna.rv_weather.app-main-60:/layout/nav_header_main.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/fragment_slideshow.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/fragment_slideshow.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-57:/layout/activity_connexion.xml",
-        "source": "com.bouchenna.rv_weather.app-main-60:/layout/activity_connexion.xml"
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/activity_connexion.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/activity_connexion.xml"
     },
     {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-57:/layout/content_main.xml",
-        "source": "com.bouchenna.rv_weather.app-main-60:/layout/content_main.xml"
-    },
-    {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-57:/layout/app_bar_main.xml",
-        "source": "com.bouchenna.rv_weather.app-main-60:/layout/app_bar_main.xml"
-    },
-    {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-57:/layout/activity_main.xml",
-        "source": "com.bouchenna.rv_weather.app-main-60:/layout/activity_main.xml"
-    },
-    {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-57:/layout/fragment_slideshow.xml",
-        "source": "com.bouchenna.rv_weather.app-main-60:/layout/fragment_slideshow.xml"
-    },
-    {
-        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-57:/layout/fragment_home.xml",
-        "source": "com.bouchenna.rv_weather.app-main-60:/layout/fragment_home.xml"
->>>>>>> Stashed changes
+        "merged": "com.bouchenna.rv_weather.app-mergeDebugResources-60:/layout/fragment_home.xml",
+        "source": "com.bouchenna.rv_weather.app-main-63:/layout/fragment_home.xml"
     }
 ]

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="zero">Parole nav pietiekami droša. Izmantojiet vismaz %1$d rakstzīmes un burtu un ciparu kombināciju</item> <item quantity="one">Parole nav pietiekami droša. Izmantojiet vismaz %1$d rakstzīmi un burtu un ciparu kombināciju</item> <item quantity="other">Parole nav pietiekami droša. Izmantojiet vismaz %1$d rakstzīmes un burtu un ciparu kombināciju</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="zero">%d jaunu paziņojumu</item>
     <item quantity="one">%d jauns paziņojums</item>
@@ -51,10 +48,6 @@
     <string name="character_counter_content_description">Ievadītās rakstzīmes: %1$d no %2$d</string>
     <string name="character_counter_overflowed_content_description">Pārsniegts rakstzīmju skaita ierobežojums (%1$d no %2$d)</string>
     <string name="clear_text_end_icon_content_description">Notīrīt tekstu</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Kļūda</string>
-    <string name="exposed_dropdown_menu_content_description">Rādīt nolaižamo izvēlni</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Iespējot</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Lai lietotne %1$s darbotos, ir jāiespējo Google Play pakalpojumi.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play pakalpojumu iespējošana</string>
@@ -170,7 +163,6 @@
     <string name="fui_welcome_back_idp_header">Jums jau ir konts</string>
     <string name="fui_welcome_back_idp_prompt">Esat jau izmantojis e-pasta adresi %1$s. Pierakstieties pakalpojumā %2$s, lai turpinātu.</string>
     <string name="fui_welcome_back_password_prompt_body">Esat jau izmantojis e-pasta adresi %1$s, lai pierakstītos. Ievadiet šī konta paroli.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Dialoglodziņa ikona</string>
     <string name="item_view_role_description">Cilne</string>
     <string name="material_clock_toggle_content_description">Atlasiet “AM” (priekšpusdienā) vai “PM” (pēcpusdienā).</string>

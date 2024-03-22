@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">A senha não é forte o suficiente. Use pelo menos %1$d caractere e combine letras e números.</item> <item quantity="other">A senha não é forte o suficiente. Use pelo menos %1$d caracteres e combine letras e números.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d nova notificação</item>
     <item quantity="other">%d novas notificações</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">Caracteres inseridos: %1$d de %2$d</string>
     <string name="character_counter_overflowed_content_description">Limite de %2$d caracteres excedido em %1$d</string>
     <string name="clear_text_end_icon_content_description">Limpar texto</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Erro</string>
-    <string name="exposed_dropdown_menu_content_description">Mostrar menu suspenso</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Ativar</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s só funciona com o Google Play Services ativado.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Ativar o Google Play Services</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">Você já tem uma conta</string>
     <string name="fui_welcome_back_idp_prompt">Você já usou o e-mail %1$s. Faça login com o %2$s para continuar.</string>
     <string name="fui_welcome_back_password_prompt_body">Você já usou o e-mail %1$s para fazer login. Insira a senha dessa conta.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Ícone de caixa de diálogo</string>
     <string name="item_view_role_description">Guia</string>
     <string name="material_clock_toggle_content_description">Selecionar AM ou PM</string>

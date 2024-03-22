@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Şifre yeterince güçlü değil. En az %1$d karakter kullanın ve hem harf hem de rakam ekleyin</item> <item quantity="other">Şifre yeterince güçlü değil. En az %1$d karakter kullanın ve hem harf hem de rakam ekleyin</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d yeni bildirim</item>
     <item quantity="other">%d yeni bildirim</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">Girilen karakter: %1$d / %2$d</string>
     <string name="character_counter_overflowed_content_description">Karakter sınırı aşıldı %1$d / %2$d</string>
     <string name="clear_text_end_icon_content_description">Metni temizle</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Hata</string>
-    <string name="exposed_dropdown_menu_content_description">Açılır menüyü göster</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Etkinleştir</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play hizmetlerini etkinleştirmezseniz %1$s çalışmaz.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play hizmetlerini etkinleştirin</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">Zaten bir hesabınız var</string>
     <string name="fui_welcome_back_idp_prompt">%1$s adresini zaten kullandınız. Devam etmek için %2$s ile oturum açın.</string>
     <string name="fui_welcome_back_password_prompt_body">%1$s adresini oturum açmak için zaten kullandınız. Bu hesap için şifrenizi girin.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">İletişim kutusu simgesi</string>
     <string name="item_view_role_description">Sekme</string>
     <string name="material_clock_toggle_content_description">ÖÖ veya ÖS\'yi seçin</string>

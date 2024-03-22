@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Password not strong enough. Use at least %1$d character and a mix of letters and numbers</item> <item quantity="other">Password not strong enough. Use at least %1$d characters and a mix of letters and numbers</item> </plurals>
->>>>>>> Stashed changes
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Navigate home"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Navigate up"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"More options"</string>
@@ -38,8 +35,6 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"Incoming call"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Ongoing call"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Screening an incoming call"</string>
-<<<<<<< Updated upstream
-=======
     <string msgid="3260749812566568062" name="copy_toast_msg">"Link copied to clipboard"</string>
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Copy link"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Open in browser"</string>
@@ -135,7 +130,6 @@
     <string name="fui_welcome_back_idp_header">You already have an account</string>
     <string name="fui_welcome_back_idp_prompt">You\'ve already used %1$s. Sign in with %2$s to continue.</string>
     <string name="fui_welcome_back_password_prompt_body">You\'ve already used %1$s to sign in. Enter your password for that account.</string>
->>>>>>> Stashed changes
     <string msgid="6264217191555673260" name="search_menu_title">"Search"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

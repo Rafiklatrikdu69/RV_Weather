@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">La contraseña no es lo suficientemente segura. Usa al menos %1$d carácter y una combinación de letras y números</item> <item quantity="other">La contraseña no es lo suficientemente segura. Usa al menos %1$d caracteres y una combinación de letras y números</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d notificación nueva</item>
     <item quantity="other">%d notificaciones nuevas</item>
@@ -18,8 +15,6 @@
     <string name="clear_text_end_icon_content_description">Borrar texto</string>
     <string name="error_icon_content_description">Error</string>
     <string name="exposed_dropdown_menu_content_description">Mostrar menú desplegable</string>
-<<<<<<< Updated upstream
-=======
     <string name="fui_accessibility_logo">Logotipo de la app</string>
     <string name="fui_auto_verified">Se verificó automáticamente el número de teléfono</string>
     <string name="fui_button_text_save">Guardar</string>
@@ -111,7 +106,6 @@
     <string name="fui_welcome_back_idp_header">Ya tienes una cuenta</string>
     <string name="fui_welcome_back_idp_prompt">Ya usaste %1$s. Accede con %2$s para continuar.</string>
     <string name="fui_welcome_back_password_prompt_body">Ya usaste %1$s para acceder. Ingresa la contraseña correspondiente.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Ícono de diálogo</string>
     <string name="item_view_role_description">Pestaña</string>
     <string name="material_clock_toggle_content_description">Selecciona a.m. o p.m.</string>

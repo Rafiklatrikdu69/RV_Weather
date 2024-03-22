@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Slaptažodis nepakankamai sudėtingas. Naudokite bent %1$d simbolį ir raidžių bei skaičių derinį.</item> <item quantity="few">Slaptažodis nepakankamai sudėtingas. Naudokite bent %1$d simbolius ir raidžių bei skaičių derinį.</item> <item quantity="many">Slaptažodis nepakankamai sudėtingas. Naudokite bent %1$d simbolio ir raidžių bei skaičių derinį.</item> <item quantity="other">Slaptažodis nepakankamai sudėtingas. Naudokite bent %1$d simbolių ir raidžių bei skaičių derinį.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d naujas pranešimas</item>
     <item quantity="few">%d nauji pranešimai</item>
@@ -52,10 +49,6 @@
     <string name="character_counter_content_description">Įvesta simbolių: %1$d iš %2$d</string>
     <string name="character_counter_overflowed_content_description">Viršytas simbolių skaičius: %1$d iš %2$d</string>
     <string name="clear_text_end_icon_content_description">Išvalyti tekstą</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Klaida</string>
-    <string name="exposed_dropdown_menu_content_description">Rodyti išskleidžiamąjį meniu</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Įgalinti</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">„%1$s“ neveiks, jei neįgalinsite „Google Play“ paslaugų.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Įgalinkite „Google Play“ paslaugas</string>
@@ -171,7 +164,6 @@
     <string name="fui_welcome_back_idp_header">Jūs jau turite paskyrą</string>
     <string name="fui_welcome_back_idp_prompt">Jau panaudojote %1$s.Jei norite tęsti, prisijunkite per „%2$s“.</string>
     <string name="fui_welcome_back_password_prompt_body">Jūs jau prisijungėte naudodami %1$s. Įveskite tos paskyros slaptažodį.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Dialogo lango piktograma</string>
     <string name="item_view_role_description">Skirtukas</string>
     <string name="material_clock_toggle_content_description">Pasirinkite „iki pietų“ arba „po pietų“</string>

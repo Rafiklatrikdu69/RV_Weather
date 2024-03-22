@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Parola nu este suficient de puternică. Folosiți cel puțin %1$d caracter și o combinație de litere și cifre.</item> <item quantity="few">Parola nu este suficient de puternică. Folosiți cel puțin %1$d caractere și o combinație de litere și cifre.</item> <item quantity="other">Parola nu este suficient de puternică. Folosiți cel puțin %1$d de caractere și o combinație de litere și cifre.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d notificare nouă</item>
     <item quantity="few">%d notificări noi</item>
@@ -51,10 +48,6 @@
     <string name="character_counter_content_description">Caractere introduse: %1$d din %2$d</string>
     <string name="character_counter_overflowed_content_description">Limita de caractere a depășit %1$d din %2$d</string>
     <string name="clear_text_end_icon_content_description">Ștergeți textul</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Eroare</string>
-    <string name="exposed_dropdown_menu_content_description">Afișați meniul drop-down</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Activați</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s nu va funcționa decât dacă activați serviciile Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Activați serviciile Google Play</string>
@@ -170,7 +163,6 @@
     <string name="fui_welcome_back_idp_header">Aveți deja un cont</string>
     <string name="fui_welcome_back_idp_prompt">Ați folosit deja %1$s. Pentru a continua, conectați-vă cu %2$s.</string>
     <string name="fui_welcome_back_password_prompt_body">Ați folosit deja %1$s pentru a vă conecta. Introduceți parola acestui cont.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Pictogramă de dialog</string>
     <string name="item_view_role_description">Filă</string>
     <string name="material_clock_toggle_content_description">Selectați ora</string>

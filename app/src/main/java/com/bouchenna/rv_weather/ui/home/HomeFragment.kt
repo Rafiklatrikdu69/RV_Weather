@@ -4,26 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bouchenna.rv_weather.databinding.FragmentHomeBinding
-<<<<<<< Updated upstream
-=======
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
->>>>>>> Stashed changes
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-<<<<<<< Updated upstream
-=======
     private lateinit var test: Button
     private lateinit var user: FirebaseAuth
 
->>>>>>> Stashed changes
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -34,13 +29,9 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-<<<<<<< Updated upstream
-=======
         user = Firebase.auth
->>>>>>> Stashed changes
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -48,13 +39,10 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
-<<<<<<< Updated upstream
-=======
         test = binding.button
 
         //test.setOnClickListener { addBD() }
 
->>>>>>> Stashed changes
         return root
     }
 
@@ -62,8 +50,6 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-<<<<<<< Updated upstream
-=======
 //     fun addBD(){
 //
 //        val loc =hashMapOf(
@@ -79,5 +65,4 @@ class HomeFragment : Fragment() {
 //                Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: }")
 //            }
 //    }
->>>>>>> Stashed changes
 }

@@ -46,10 +46,6 @@
     <string name="character_counter_content_description">%1$d/%2$d simvol daxil edilib</string>
     <string name="character_counter_overflowed_content_description">Simvol limiti %1$d/%2$d dəyərini keçdi</string>
     <string name="clear_text_end_icon_content_description">Mətni silin</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Xəta</string>
-    <string name="exposed_dropdown_menu_content_description">Açılan menyunu göstərin</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aktiv edin</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s Google Play xidmətlərini aktiv edənə kimi işləməyəcək.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play xidmətlərini aktiv edin</string>
@@ -74,7 +70,6 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Linki kopyalayın"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Brauzerdə açın"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Linki paylaşın"</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Dialoq ikonası</string>
     <string name="item_view_role_description">Tab</string>
     <string name="material_clock_toggle_content_description">Gündüz və ya axşam seçin</string>

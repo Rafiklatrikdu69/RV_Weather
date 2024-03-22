@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">密码的安全系数不够高。请使用至少 %1$d 个字符，并混合使用字母和数字</item> <item quantity="other">密码的安全系数不够高。请使用至少 %1$d 个字符，并混合使用字母和数字</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d 条新通知</item>
     <item quantity="other">%d 条新通知</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">输入了 %1$d 个字符（上限为 %2$d 个）</string>
     <string name="character_counter_overflowed_content_description">超出字符数限制（共 %1$d 个，上限为 %2$d 个）</string>
     <string name="clear_text_end_icon_content_description">清除文字</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">错误</string>
-    <string name="exposed_dropdown_menu_content_description">显示下拉菜单</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">启用</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">您必须先启用 Google Play 服务，然后才能运行%1$s。</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">启用 Google Play 服务</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">您已经有帐号了</string>
     <string name="fui_welcome_back_idp_prompt">您已经使用了 %1$s。请使用 %2$s 帐号登录以继续操作。</string>
     <string name="fui_welcome_back_password_prompt_body">您已经使用 %1$s 登录了，请输入该帐号的密码。</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">对话框图标</string>
     <string name="item_view_role_description">标签页</string>
     <string name="material_clock_toggle_content_description">选择上午或下午</string>

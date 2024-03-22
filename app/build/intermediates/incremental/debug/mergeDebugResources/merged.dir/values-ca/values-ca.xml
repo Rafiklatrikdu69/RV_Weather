@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">La contrasenya no és prou segura. Utilitza com a mínim %1$d caràcter i combina lletres i números.</item> <item quantity="other">La contrasenya no és prou segura. Utilitza com a mínim %1$d caràcters i combina lletres i números.</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d notificació nova</item>
     <item quantity="other">%d notificacions noves</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">Caràcters introduïts: %1$d de %2$d</string>
     <string name="character_counter_overflowed_content_description">S\'ha superat el límit de caràcters (%1$d de %2$d)</string>
     <string name="clear_text_end_icon_content_description">Esborra el text</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Error</string>
-    <string name="exposed_dropdown_menu_content_description">Mostra el menú desplegable</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Activa</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s no funcionarà si no actives Serveis de Google Play.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Activa Serveis de Google Play</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">Ja tens un compte</string>
     <string name="fui_welcome_back_idp_prompt">Ja has utilitzat l\'adreça electrònica %1$s. Inicia la sessió amb %2$s per continuar.</string>
     <string name="fui_welcome_back_password_prompt_body">Ja has utilitzat l\'adreça electrònica %1$s per iniciar la sessió. Introdueix la contrasenya d\'aquest compte.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Icona del quadre de diàleg</string>
     <string name="item_view_role_description">Tabulador</string>
     <string name="material_clock_toggle_content_description">Selecciona a. m. o p. m.</string>

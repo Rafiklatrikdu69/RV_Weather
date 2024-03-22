@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">Passordet er ikke sterkt nok. Bruk minst %1$d tegn og en blanding av bokstaver og tall</item> <item quantity="other">Passordet er ikke sterkt nok. Bruk minst %1$d tegn og en blanding av bokstaver og tall</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d nytt varsel</item>
     <item quantity="other">%d nye varsler</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">%1$d av %2$d tegn er skrevet inn</string>
     <string name="character_counter_overflowed_content_description">Tegngrensen er overskredet – %1$d av %2$d</string>
     <string name="clear_text_end_icon_content_description">Fjern teksten</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">Feil</string>
-    <string name="exposed_dropdown_menu_content_description">Vis rullegardinmenyen</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aktivér</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s fungerer ikke med mindre du slår på Google Play-tjenester.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Slå på Google Play-tjenester</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">Du har allerede en konto</string>
     <string name="fui_welcome_back_idp_prompt">Du har allerede brukt %1$s. Logg på med %2$s for å fortsette.</string>
     <string name="fui_welcome_back_password_prompt_body">Du har allerede brukt %1$s for å logge på. Angi passordet ditt for denne kontoen.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">Dialogboksikon</string>
     <string name="item_view_role_description">Fane</string>
     <string name="material_clock_toggle_content_description">Velg AM eller PM</string>

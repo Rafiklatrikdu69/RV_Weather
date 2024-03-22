@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-<<<<<<< Updated upstream
-=======
     <plurals name="fui_error_weak_password"> <item quantity="one">گذرواژه به اندازه کافی قوی نیست. حداقل باید از %1$d نویسه و ترکیبی از حروف و اعداد استفاده شود</item> <item quantity="other">گذرواژه به اندازه کافی قوی نیست. حداقل باید از %1$d نویسه و ترکیبی از حروف و اعداد استفاده شود</item> </plurals>
->>>>>>> Stashed changes
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d اعلان جدید</item>
     <item quantity="other">%d اعلان جدید</item>
@@ -50,10 +47,6 @@
     <string name="character_counter_content_description">نویسه‌های واردشده %1$d از %2$d</string>
     <string name="character_counter_overflowed_content_description">محدودیت نویسه از حد مجاز %1$d از %2$d بیشتر شده است</string>
     <string name="clear_text_end_icon_content_description">پاک کردن نوشتار</string>
-<<<<<<< Updated upstream
-    <string name="error_icon_content_description">خطا</string>
-    <string name="exposed_dropdown_menu_content_description">نمایش منوی کرکره‌ای</string>
-=======
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">فعال کردن</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">‏تا وقتی «خدمات Google Play» را فعال نکنید، %1$s کار نمی‌کند.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">‏‫فعال کردن «خدمات Google Play»</string>
@@ -169,7 +162,6 @@
     <string name="fui_welcome_back_idp_header">از قبل حسابی دارید</string>
     <string name="fui_welcome_back_idp_prompt">قبلاً از %1$s استفاده کرده‌اید. برای ادامه، با %2$s وارد سیستم شوید.</string>
     <string name="fui_welcome_back_password_prompt_body">قبلاً از %1$s برای ورود به سیستم استفاده کرده‌اید. گذرواژه این حساب را وارد کنید.</string>
->>>>>>> Stashed changes
     <string name="icon_content_description">نماد کادر گفتگو</string>
     <string name="item_view_role_description">برگه</string>
     <string name="material_clock_toggle_content_description">انتخاب .ق.ظ. یا ب.ظ.</string>
