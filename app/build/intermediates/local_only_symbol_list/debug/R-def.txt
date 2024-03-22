@@ -20,10 +20,11 @@ drawable ic_menu_slideshow
 drawable side_nav_bar
 id action_settings
 id app_bar_main
+id autocomplete_fragment
 id drawer_layout
 id fab
-id fragment
 id imageView
+id map_fragment
 id mobile_navigation
 id nav_gallery
 id nav_home

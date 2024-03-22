@@ -3673,6 +3673,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id autocomplete_fragment
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3785,7 +3786,6 @@ id fixed
 id flip
 id floating
 id forever
-id fragment
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3837,6 +3837,7 @@ id list_item
 id locale
 id ltr
 id m3_side_sheet
+id map_fragment
 id marquee
 id masked
 id match_constraint

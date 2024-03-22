@@ -4,41 +4,7 @@
             "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-50:/values-hr/values-hr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\d1e4a685b1001794fbcfe4ee9c157a7e\\transformed\\core-1.12.0\\res\\values-hr\\values-hr.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,260,357,456,560,664,781",
-                        "endColumns": "97,106,96,98,103,103,116,100",
-                        "endOffsets": "148,255,352,451,555,659,776,877"
-                    },
-                    "to": {
-                        "startLines": "39,40,41,42,43,44,45,138",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3512,3610,3717,3814,3913,4017,4121,12474",
-                        "endColumns": "97,106,96,98,103,103,116,100",
-                        "endOffsets": "3605,3712,3809,3908,4012,4116,4233,12570"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\7a6ea99b1f66c3564ef935cff968030e\\transformed\\places-3.3.0\\res\\values-hr\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0",
-                        "startOffsets": "184,264,328,422,494,541,605,693",
-                        "endColumns": "79,63,93,71,46,63,87,56",
-                        "endOffsets": "263,327,421,493,540,604,692,749"
-                    },
-                    "to": {
-                        "startLines": "129,130,131,132,133,134,135,136",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "11791,11875,11943,12041,12117,12168,12236,12328",
-                        "endColumns": "83,67,97,75,50,67,91,60",
-                        "endOffsets": "11870,11938,12036,12112,12163,12231,12323,12384"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\56af212e940d1f2bde023f0cf7bfa9c5\\transformed\\material-1.11.0\\res\\values-hr\\values-hr.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\d65c2917f3c70c810ac2a84036541ea0\\transformed\\material-1.11.0\\res\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,24 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\72daf70eeb1810e4ac82863138957869\\transformed\\play-services-basement-18.0.0\\res\\values-hr\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "127",
-                        "endOffsets": "322"
-                    },
-                    "to": {
-                        "startLines": "57",
-                        "startColumns": "4",
-                        "startOffsets": "5560",
-                        "endColumns": "131",
-                        "endOffsets": "5687"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\6b3ddd02f3bf0e97437aee856699301e\\transformed\\navigation-ui-2.7.7\\res\\values-hr\\values-hr.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\e8aff63bfd1f759115931fd1052ec4d8\\transformed\\navigation-ui-2.7.7\\res\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -91,7 +40,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\9e095364f6286d9e9e54418eda71e474\\transformed\\play-services-base-18.0.1\\res\\values-hr\\values.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\81d8648a378d0a5f5a7fbb8326add61b\\transformed\\core-1.12.0\\res\\values-hr\\values-hr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,260,357,456,560,664,781",
+                        "endColumns": "97,106,96,98,103,103,116,100",
+                        "endOffsets": "148,255,352,451,555,659,776,877"
+                    },
+                    "to": {
+                        "startLines": "39,40,41,42,43,44,45,138",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3512,3610,3717,3814,3913,4017,4121,12474",
+                        "endColumns": "97,106,96,98,103,103,116,100",
+                        "endOffsets": "3605,3712,3809,3908,4012,4116,4233,12570"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\dc473bfc9113276c019f4eb80fe4a9ef\\transformed\\play-services-basement-18.0.0\\res\\values-hr\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "127",
+                        "endOffsets": "322"
+                    },
+                    "to": {
+                        "startLines": "57",
+                        "startColumns": "4",
+                        "startOffsets": "5560",
+                        "endColumns": "131",
+                        "endOffsets": "5687"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a4662592e799a4f8b3a303ac459ba93d\\transformed\\play-services-base-18.0.1\\res\\values-hr\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -108,7 +91,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\60b492a510ec931c8abbf232e0a5612c\\transformed\\appcompat-1.6.1\\res\\values-hr\\values-hr.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\a26c8427b288ad82c0ed4c273e6492c4\\transformed\\places-3.3.0\\res\\values-hr\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11",
+                        "startColumns": "0,0,0,0,0,0,0,0",
+                        "startOffsets": "184,264,328,422,494,541,605,693",
+                        "endColumns": "79,63,93,71,46,63,87,56",
+                        "endOffsets": "263,327,421,493,540,604,692,749"
+                    },
+                    "to": {
+                        "startLines": "129,130,131,132,133,134,135,136",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "11791,11875,11943,12041,12117,12168,12236,12328",
+                        "endColumns": "83,67,97,75,50,67,91,60",
+                        "endOffsets": "11870,11938,12036,12112,12163,12231,12323,12384"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\9421bcffda200824c2fe3ef8d125a3b4\\transformed\\appcompat-1.6.1\\res\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
