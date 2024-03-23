@@ -1,5 +1,5 @@
-com.bouchenna.rv_weather.test.app-jetified-core-1.5.0-0 C:\Users\Rafik\.gradle\caches\transforms-3\678eb681cc25c1442fdce14c7f27879e\transformed\jetified-core-1.5.0\res
-com.bouchenna.rv_weather.test.app-jetified-annotation-experimental-1.3.0-1 C:\Users\Rafik\.gradle\caches\transforms-3\889ccf827cd0c310d12ef909118d422c\transformed\jetified-annotation-experimental-1.3.0\res
+com.bouchenna.rv_weather.test.app-jetified-core-1.5.0-0 C:\Users\Rafik\.gradle\caches\transforms-3\9b2a94cdb23ec374b6b0d9a1e28233e3\transformed\jetified-core-1.5.0\res
+com.bouchenna.rv_weather.test.app-jetified-annotation-experimental-1.3.0-1 C:\Users\Rafik\.gradle\caches\transforms-3\e1fac7a3d633b2d6a9c5104724e9e55b\transformed\jetified-annotation-experimental-1.3.0\res
 com.bouchenna.rv_weather.test.app-androidTest-2 C:\Users\Rafik\AndroidStudioProjects\RV_weather\app\build\generated\res\resValues\androidTest\debug
 com.bouchenna.rv_weather.test.app-mergeDebugAndroidTestResources-3 C:\Users\Rafik\AndroidStudioProjects\RV_weather\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
 com.bouchenna.rv_weather.test.app-mergeDebugAndroidTestResources-4 C:\Users\Rafik\AndroidStudioProjects\RV_weather\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir

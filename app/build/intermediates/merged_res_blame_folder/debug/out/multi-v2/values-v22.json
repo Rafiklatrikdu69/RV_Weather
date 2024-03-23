@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-53:/values-v22/values-v22.xml",
+            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-63:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\9421bcffda200824c2fe3ef8d125a3b4\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\56ba582400a294234224d0d3e20b14d0\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-53:/values-land/values-land.xml",
+            "outputFile": "com.bouchenna.rv_weather.app-mergeDebugResources-63:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\9421bcffda200824c2fe3ef8d125a3b4\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\56ba582400a294234224d0d3e20b14d0\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\d65c2917f3c70c810ac2a84036541ea0\\transformed\\material-1.11.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Rafik\\.gradle\\caches\\transforms-3\\3d71bf7c1d634e59ee168d076ef34a23\\transformed\\material-1.11.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,26,35,40",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

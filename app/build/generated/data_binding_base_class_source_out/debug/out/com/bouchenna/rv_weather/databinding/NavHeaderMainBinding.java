@@ -4,6 +4,7 @@ package com.bouchenna.rv_weather.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,16 +22,29 @@ public final class NavHeaderMainBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final Button buttonDeconnexion;
+
+  @NonNull
   public final ImageView imageView;
 
   @NonNull
   public final TextView textView;
 
-  private NavHeaderMainBinding(@NonNull LinearLayout rootView, @NonNull ImageView imageView,
-      @NonNull TextView textView) {
+  @NonNull
+  public final TextView textViewRafik;
+
+  @NonNull
+  public final TextView textViewValentin;
+
+  private NavHeaderMainBinding(@NonNull LinearLayout rootView, @NonNull Button buttonDeconnexion,
+      @NonNull ImageView imageView, @NonNull TextView textView, @NonNull TextView textViewRafik,
+      @NonNull TextView textViewValentin) {
     this.rootView = rootView;
+    this.buttonDeconnexion = buttonDeconnexion;
     this.imageView = imageView;
     this.textView = textView;
+    this.textViewRafik = textViewRafik;
+    this.textViewValentin = textViewValentin;
   }
 
   @Override
@@ -60,6 +74,12 @@ public final class NavHeaderMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.buttonDeconnexion;
+      Button buttonDeconnexion = ViewBindings.findChildViewById(rootView, id);
+      if (buttonDeconnexion == null) {
+        break missingId;
+      }
+
       id = R.id.imageView;
       ImageView imageView = ViewBindings.findChildViewById(rootView, id);
       if (imageView == null) {
@@ -72,7 +92,20 @@ public final class NavHeaderMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new NavHeaderMainBinding((LinearLayout) rootView, imageView, textView);
+      id = R.id.textViewRafik;
+      TextView textViewRafik = ViewBindings.findChildViewById(rootView, id);
+      if (textViewRafik == null) {
+        break missingId;
+      }
+
+      id = R.id.textViewValentin;
+      TextView textViewValentin = ViewBindings.findChildViewById(rootView, id);
+      if (textViewValentin == null) {
+        break missingId;
+      }
+
+      return new NavHeaderMainBinding((LinearLayout) rootView, buttonDeconnexion, imageView,
+          textView, textViewRafik, textViewValentin);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

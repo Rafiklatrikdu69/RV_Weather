@@ -19,7 +19,9 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.bouchenna.rv_weather.ui.slideshow.SlideshowFragment"
+        android:name="com.bouchenna.rv_weather.ui.showMeteo.showMeteoFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+
 </navigation>

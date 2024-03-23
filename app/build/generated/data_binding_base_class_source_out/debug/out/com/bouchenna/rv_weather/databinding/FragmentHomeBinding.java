@@ -4,6 +4,7 @@ package com.bouchenna.rv_weather.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -26,6 +27,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final BottomAppBar bottomAppBar;
 
   @NonNull
+  public final Button button;
+
+  @NonNull
   public final ImageView meteo;
 
   @NonNull
@@ -38,10 +42,11 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final MaterialCardView textView;
 
   private FragmentHomeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomAppBar bottomAppBar, @NonNull ImageView meteo, @NonNull TextView nomVille,
-      @NonNull TextView textHome, @NonNull MaterialCardView textView) {
+      @NonNull BottomAppBar bottomAppBar, @NonNull Button button, @NonNull ImageView meteo,
+      @NonNull TextView nomVille, @NonNull TextView textHome, @NonNull MaterialCardView textView) {
     this.rootView = rootView;
     this.bottomAppBar = bottomAppBar;
+    this.button = button;
     this.meteo = meteo;
     this.nomVille = nomVille;
     this.textHome = textHome;
@@ -81,6 +86,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.button;
+      Button button = ViewBindings.findChildViewById(rootView, id);
+      if (button == null) {
+        break missingId;
+      }
+
       id = R.id.meteo;
       ImageView meteo = ViewBindings.findChildViewById(rootView, id);
       if (meteo == null) {
@@ -105,8 +116,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, bottomAppBar, meteo, nomVille,
-          textHome, textView);
+      return new FragmentHomeBinding((ConstraintLayout) rootView, bottomAppBar, button, meteo,
+          nomVille, textHome, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

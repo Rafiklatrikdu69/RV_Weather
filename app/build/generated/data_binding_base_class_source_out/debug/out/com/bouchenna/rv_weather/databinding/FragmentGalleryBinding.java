@@ -4,7 +4,7 @@ package com.bouchenna.rv_weather.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentGalleryBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final GraphView idGraphView;
@@ -26,16 +26,20 @@ public final class FragmentGalleryBinding implements ViewBinding {
   @NonNull
   public final TextView idTVHead;
 
-  private FragmentGalleryBinding(@NonNull RelativeLayout rootView, @NonNull GraphView idGraphView,
-      @NonNull TextView idTVHead) {
+  @NonNull
+  public final TextView textGallery;
+
+  private FragmentGalleryBinding(@NonNull LinearLayout rootView, @NonNull GraphView idGraphView,
+      @NonNull TextView idTVHead, @NonNull TextView textGallery) {
     this.rootView = rootView;
     this.idGraphView = idGraphView;
     this.idTVHead = idTVHead;
+    this.textGallery = textGallery;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -72,7 +76,14 @@ public final class FragmentGalleryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentGalleryBinding((RelativeLayout) rootView, idGraphView, idTVHead);
+      id = R.id.text_gallery;
+      TextView textGallery = ViewBindings.findChildViewById(rootView, id);
+      if (textGallery == null) {
+        break missingId;
+      }
+
+      return new FragmentGalleryBinding((LinearLayout) rootView, idGraphView, idTVHead,
+          textGallery);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

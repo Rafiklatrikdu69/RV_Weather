@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311929819403",
+    "project_id": "rv-weather-566fd",
+    "storage_bucket": "rv-weather-566fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311929819403:android:5c6ef23edc7acca20b120e",
+        "android_client_info": {
+          "package_name": "com.bouchenna.rv_weather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311929819403-oo0lrppiv4ap1iva9onihlav443v2m3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL5f628VG3IJxpNfT49eY6kSZXFSUbBOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311929819403-oo0lrppiv4ap1iva9onihlav443v2m3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
