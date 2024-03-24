@@ -55,6 +55,7 @@
     import retrofit2.http.Query
     import kotlin.math.roundToInt
     import android.widget.Button
+    import com.google.android.gms.maps.model.MarkerOptions
     import com.google.firebase.auth.FirebaseAuth
     import com.google.firebase.auth.ktx.auth
     import com.google.firebase.ktx.Firebase
@@ -316,13 +317,21 @@
             notificationManager.notify(0, notification)
         }
 
-        override fun onMapReady(p0: GoogleMap?) {
+        override fun onMapReady(googleMap: GoogleMap?) {
+
 
         }
+
 
         override fun onMapClick(point: LatLng) {
             val cameraUpdate = CameraUpdateFactory.newLatLngZoom(point, 10f)
             googleMap?.moveCamera(cameraUpdate)
+            val sydney = LatLng(-33.852, 151.211)
+            googleMap?.addMarker(
+                MarkerOptions()
+                    .position(sydney)
+                    .title("Marker in Sydney")
+            )
         }
 
 
