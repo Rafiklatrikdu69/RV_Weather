@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-<uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,32 +16,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RV_weather"
         tools:targetApi="31">
+        <service
+            android:name=".service.FireStore_db"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.RV_weather.NoActionBar">
-        </activity>
-
+            android:theme="@style/Theme.RV_weather.NoActionBar"></activity>
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
-            android:theme="@style/Theme.RV_weather.NoActionBar"/>
+            android:theme="@style/Theme.RV_weather.NoActionBar" />
         <activity
             android:name=".ConnexionActivity"
             android:exported="true"
             android:theme="@style/Theme.RV_weather.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAUhesh_MfnKVmEET8G6IKmDVaYUocE_yI"
-            />
-
+            android:value="AIzaSyAUhesh_MfnKVmEET8G6IKmDVaYUocE_yI" />
     </application>
 
 </manifest>

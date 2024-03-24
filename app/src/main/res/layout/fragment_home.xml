@@ -16,7 +16,7 @@
         android:id="@+id/autocomplete_fragment"
         android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -80,8 +80,6 @@
         tools:text="Text Home" />
 
 
-
-
         <fragment
             android:id="@+id/map_fragment"
             class="com.google.android.gms.maps.SupportMapFragment"
@@ -97,7 +95,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/menu_bottom_app_bar"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        tools:ignore="BottomAppBar" />
 
 
 
