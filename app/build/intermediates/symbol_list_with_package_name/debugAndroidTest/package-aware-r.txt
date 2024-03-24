@@ -1,3 +1,0 @@
-com.bouchenna.rv_weather.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme
