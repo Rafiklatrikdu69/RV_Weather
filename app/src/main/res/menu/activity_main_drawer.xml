@@ -20,10 +20,7 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
            />
-        <item
-            android:id="@+id/nav_custom_layout"
-            android:title="Ville : "
-            app:actionLayout="@layout/menu_custom" />
+
     </group>
 
 

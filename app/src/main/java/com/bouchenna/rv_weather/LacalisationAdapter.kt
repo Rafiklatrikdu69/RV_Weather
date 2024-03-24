@@ -11,6 +11,7 @@ import com.bouchenna.rv_weather.MainActivity
 import com.bouchenna.rv_weather.databinding.ItemLayoutBinding
 
 
+
 class LocalisationAdapter(private val listener: MainActivity) : ListAdapter<Localisation, LocalisationAdapter.LocalisationViewHolder>(DiffCardCallback()) {
 
 
