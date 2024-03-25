@@ -16,6 +16,9 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.core.view.GravityCompat
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bouchenna.rv_weather.service.FireBase_db
@@ -35,9 +38,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var menuBurger: ImageView
     private lateinit var deconnexion: Button
     private lateinit var firebaseDb: FireBase_db
-
+//    private lateinit var mobile_navigation: NavController
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: LocalisationAdapter
+    private lateinit var addLocalisation: Button
     private var locs: ArrayList<Localisation> = ArrayList()
 
 
@@ -45,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//
+//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
+//        mobile_navigation = navHostFragment.navController
 
         menuBurger = binding.menuBurgerImageView
         deconnexion = binding.menuCustomInclude.header.buttonDeconnexion
@@ -54,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = LocalisationAdapter(this)
         recyclerView.adapter = adapter
-
+        addLocalisation = binding.menuCustomInclude.addLocButton
         getData()
 
         user.currentUser?.email?.let {
@@ -73,23 +80,9 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
-
-        // addLocalisation exemple
-
-//        val paris = Localisation(
-//            nom = "Paris",
-//            coord = GeoPoint(48.8566, 2.3522),
-//            country = "France",
-//            state = "Île-de-France",
-//            userId = user.uid.toString()
-//        )
-//        lifecycleScope.launch{
-//            firebaseDb.addLocalisation(paris)
-//            getData()
-//        }
-
-
-
+        addLocalisation.setOnClickListener{
+            //redirige sur la map
+        }
 
     }
 
@@ -120,6 +113,14 @@ class MainActivity : AppCompatActivity() {
             adapter.submitList(locs)
             adapter.notifyDataSetChanged()
         }
+    }
+
+    fun addData (loc: Localisation): Boolean{
+        lifecycleScope.launch{
+            firebaseDb.addLocalisation(loc)
+            getData()
+        }
+        return true
     }
 
 }
