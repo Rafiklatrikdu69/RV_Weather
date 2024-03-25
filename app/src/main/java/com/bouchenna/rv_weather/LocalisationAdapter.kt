@@ -1,6 +1,8 @@
 package com.sonney.valentin
 
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -9,7 +11,7 @@ import com.bouchenna.rv_weather.Localisation
 import com.bouchenna.rv_weather.MainActivity
 
 import com.bouchenna.rv_weather.databinding.ItemLayoutBinding
-
+import com.bouchenna.rv_weather.service.FireBase_db
 
 
 class LocalisationAdapter(private val listener: MainActivity) : ListAdapter<Localisation, LocalisationAdapter.LocalisationViewHolder>(DiffCardCallback()) {
@@ -38,8 +40,10 @@ class LocalisationAdapter(private val listener: MainActivity) : ListAdapter<Loca
     inner class LocalisationViewHolder(private val binding: ItemLayoutBinding):
 
         RecyclerView.ViewHolder(binding.root){
-        fun bind(Localisation: Localisation){
-
+        fun bind(loc: Localisation){
+            binding.titleTextView.text = loc.nom
+            binding.itemLayout.setOnLongClickListener{listener.suppression(loc)}
         }
+
     }
 }

@@ -15,39 +15,28 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:paddingVertical="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:text="METEO" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center"
-        android:layout_marginTop="25dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="by :" />
+        android:text="User :" />
+
 
     <TextView
-        android:id="@+id/textViewRafik"
+        android:id="@+id/textViewUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rafik Bouchenna" />
+        android:text="" />
 
     <Button
         android:id="@+id/buttonDeconnexion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DEconnexion" />
-
-    <TextView
-        android:id="@+id/textViewValentin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valentin Sonney" />
+        android:text="Deconnexion" />
 
 </LinearLayout>

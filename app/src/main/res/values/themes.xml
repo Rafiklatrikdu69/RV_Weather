@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.RV_weather" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/blue_8</item>
+        <item name="colorPrimaryVariant">@color/blue_10</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -16,7 +16,7 @@
 
 
     <style name="principal_Blue">
-        <item name="background">@color/principal_blue</item>
+        <item name="background">@color/blue_9</item>
     </style>
 
 

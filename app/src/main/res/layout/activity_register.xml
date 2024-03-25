@@ -19,6 +19,7 @@
             android:id="@+id/textInputEditTextPseudoInscription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:hint="Pseudo" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -35,6 +36,7 @@
             android:id="@+id/textInputEditTextMdpInscription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:hint="Mot de passe" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,7 +55,7 @@
         android:id="@+id/buttonInscription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="inscription"
+        android:text="Valider"
         android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutMdpInscription"
         app:layout_constraintStart_toStartOf="parent"
