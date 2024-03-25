@@ -1,44 +1,33 @@
 package com.bouchenna.rv_weather
 
 
-import android.annotation.SuppressLint
-import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
-import android.widget.AutoCompleteTextView
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.bouchenna.rv_weather.databinding.ActivityMainBinding
-import com.google.android.gms.fitness.data.Field
-import com.google.android.libraries.places.api.Places
-import com.google.android.libraries.places.api.model.Place
-import com.google.android.libraries.places.widget.AutocompleteSupportFragment
-
-import android.content.Intent
-import android.util.Log
-import android.view.View
-
+import com.sonney.valentin.LocalisationAdapter
 import android.widget.Button
 import android.widget.ImageView
-
 import androidx.core.view.GravityCompat
-import androidx.navigation.fragment.findNavController
-
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+import com.bouchenna.rv_weather.service.FireBase_db
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.GeoPoint
 import com.google.firebase.ktx.Firebase
-import com.sonney.valentin.LocalisationAdapter
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -48,10 +37,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var user: FirebaseAuth
     private lateinit var menuBurger: ImageView
     private lateinit var deconnexion: Button
-
-
+    private lateinit var firebaseDb: FireBase_db
+//    private lateinit var mobile_navigation: NavController
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: LocalisationAdapter
+    private lateinit var addLocalisation: Button
     private var locs: ArrayList<Localisation> = ArrayList()
 
 
@@ -59,17 +49,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // RecyclerView
-        recyclerView = binding.menuCustomInclude.recyclerViewMenu
-        adapter = LocalisationAdapter(this)
-        recyclerView.adapter = adapter
-        adapter.submitList(locs)
+//
+//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
+//        mobile_navigation = navHostFragment.navController
 
         menuBurger = binding.menuBurgerImageView
         deconnexion = binding.menuCustomInclude.header.buttonDeconnexion
+        firebaseDb = FireBase_db()
+        user  = FirebaseAuth.getInstance()
+        recyclerView = binding.menuCustomInclude.recyclerViewMenu
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        adapter = LocalisationAdapter(this)
+        recyclerView.adapter = adapter
+        addLocalisation = binding.menuCustomInclude.addLocButton
+        getData()
+
+        user.currentUser?.email?.let {
+            binding.menuCustomInclude.header.textViewUserName.text = it
+        }
 
         deconnexion.setOnClickListener{
+
             Firebase.auth.signOut()
             val intent = Intent(this, ConnexionActivity::class.java)
             startActivity(intent)
@@ -80,6 +80,9 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
+        addLocalisation.setOnClickListener{
+            //redirige sur la map
+        }
 
     }
 
@@ -95,6 +98,29 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+    fun suppression(loc: Localisation): Boolean{
 
+        lifecycleScope.launch{
+            firebaseDb.deleteLocalisation(loc)
+            getData()
+        }
+        return  true
+    }
+
+    fun getData (){
+        lifecycleScope.launch {
+            locs = firebaseDb.getLocalisations(user.uid.toString())
+            adapter.submitList(locs)
+            adapter.notifyDataSetChanged()
+        }
+    }
+
+    fun addData (loc: Localisation): Boolean{
+        lifecycleScope.launch{
+            firebaseDb.addLocalisation(loc)
+            getData()
+        }
+        return true
+    }
 
 }
