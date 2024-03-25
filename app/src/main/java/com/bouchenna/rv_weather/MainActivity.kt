@@ -57,6 +57,10 @@ class MainActivity : AppCompatActivity() {
 
         getData()
 
+        user.currentUser?.email?.let {
+            binding.menuCustomInclude.header.textViewUserName.text = it
+        }
+
         deconnexion.setOnClickListener{
 
             Firebase.auth.signOut()

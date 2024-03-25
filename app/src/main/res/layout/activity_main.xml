@@ -43,11 +43,24 @@
                             android:id="@+id/menuBurgerImageView"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
-                            android:src="@drawable/ic_menu_burger"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_menu_burger_white"
                             app:layout_constraintBottom_toBottomOf="parent"
-
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="METEO"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
 
 
 
@@ -68,6 +81,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:layout_marginStart="-64dp"
+        tools:visibility="invisible"
         />
 
 

@@ -20,7 +20,8 @@
             android:id="@+id/textInputEditTextPseudo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Pseudo" />
+            android:layout_marginHorizontal="10dp"
+            android:hint="Email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -36,6 +37,7 @@
             android:id="@+id/textInputEditTextMdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:hint="Mot de passe" />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -14,18 +14,20 @@
         android:layout_gravity="start"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="add Meteo"
-        app:layout_constraintHeight_percent="1"/>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewMenu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintHeight_percent="1"
+        />
+
+    <Button
+        android:id="@+id/addLocButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Add Localisation"
         />
 
 </LinearLayout>
