@@ -1,6 +1,7 @@
 package com.bouchenna.rv_weather.ui.gallery
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,12 @@ class GalleryFragment : Fragment() {
 
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val nom = arguments?.getString("nom")
+        val longitude = arguments?.getDouble("long")
+        val latitude = arguments?.getDouble("lat")
+
+        binding.idTVHead.text = nom
 
 
         galleryViewModel.text.observe(viewLifecycleOwner) {

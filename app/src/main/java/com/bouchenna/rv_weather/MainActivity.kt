@@ -14,6 +14,7 @@ import com.bouchenna.rv_weather.databinding.ActivityMainBinding
 import com.sonney.valentin.LocalisationAdapter
 import android.widget.Button
 import android.widget.ImageView
+import androidx.core.os.bundleOf
 import androidx.core.view.GravityCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
@@ -42,6 +43,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: LocalisationAdapter
     private lateinit var addLocalisation: Button
+    private lateinit var navHostFragment: NavHostFragment
+    private lateinit var navController: NavController
     private var locs: ArrayList<Localisation> = ArrayList()
 
 
@@ -49,10 +52,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//
-//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
-//        mobile_navigation = navHostFragment.navController
 
+        navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
+        navController = navHostFragment.navController
         menuBurger = binding.menuBurgerImageView
         deconnexion = binding.menuCustomInclude.header.buttonDeconnexion
         firebaseDb = FireBase_db()
@@ -81,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         addLocalisation.setOnClickListener{
-            //redirige sur la map
+            navController.navigate(R.id.nav_home)
         }
 
     }
@@ -107,6 +109,17 @@ class MainActivity : AppCompatActivity() {
         return  true
     }
 
+    fun showMmeteo(loc: Localisation): Boolean{
+
+        val bundle = Bundle().apply {
+            putString("nom", loc.nom)
+            putDouble("long", loc.coord.longitude)
+            putDouble("lat", loc.coord.latitude)}
+            navController.navigate(R.id.action_nav_home_to_nav_gallery, bundle)
+
+        return  true
+    }
+
     fun getData (){
         lifecycleScope.launch {
             locs = firebaseDb.getLocalisations(user.uid.toString())
@@ -117,6 +130,7 @@ class MainActivity : AppCompatActivity() {
 
     fun addData (loc: Localisation): Boolean{
         lifecycleScope.launch{
+            loc.userId = user.uid.toString()
             firebaseDb.addLocalisation(loc)
             getData()
         }
