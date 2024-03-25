@@ -43,6 +43,7 @@ class LocalisationAdapter(private val listener: MainActivity) : ListAdapter<Loca
         fun bind(loc: Localisation){
             binding.titleTextView.text = loc.nom
             binding.itemLayout.setOnLongClickListener{listener.suppression(loc)}
+            binding.itemLayout.setOnClickListener{listener.showMmeteo(loc)}
         }
 
     }
