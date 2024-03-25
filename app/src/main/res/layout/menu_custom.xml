@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:orientation="vertical">
 
@@ -16,13 +17,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="add Meteo"/>
+        android:text="add Meteo"
+        app:layout_constraintHeight_percent="1"/>
 
-    <!-- RecyclerView for the menu items -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintHeight_percent="1"
         />
 
 </LinearLayout>
