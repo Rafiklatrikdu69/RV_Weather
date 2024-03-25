@@ -80,7 +80,7 @@
         private var _binding: FragmentHomeBinding? = null
         private lateinit var test: Button
         private lateinit var user: FirebaseAuth
-
+        private var marker:Boolean= false
         // This property is only valid between onCreateView and
         // onDestroyView.
         private val binding get() = _binding!!
@@ -144,7 +144,7 @@
                         val lating = p0.latLng
                         val cameraUpdate = CameraUpdateFactory.newLatLngZoom(lating, 15f)
                         googleMap?.moveCamera(cameraUpdate)
-                        binding.textHome.text = lating!!.toString()
+                      //  binding.textHome.text = lating!!.toString()
                         get(lating)
 
                     }
@@ -324,15 +324,27 @@
 
 
         override fun onMapClick(point: LatLng) {
-            val cameraUpdate = CameraUpdateFactory.newLatLngZoom(point, 10f)
+            val cameraUpdate = CameraUpdateFactory.newLatLngZoom(point, 5f)
             googleMap?.moveCamera(cameraUpdate)
-            val sydney = LatLng(-33.852, 151.211)
-            googleMap?.addMarker(
-                MarkerOptions()
-                    .position(sydney)
-                    .title("Marker in Sydney")
-            )
+            val ville = LatLng(point.latitude, point.longitude)
+            if (!marker) {
+                googleMap?.addMarker(
+                    MarkerOptions()
+                        .position(ville)
+                        .title("Marker in Sydney")
+                )
+                this.marker = true
+            } else {
+                googleMap?.clear()
+                googleMap?.addMarker(
+                    MarkerOptions()
+                        .position(ville)
+                        .title("Marker in Sydney")
+                )
+            }
+            get(point)
         }
+
 
 
         @SuppressLint("MissingPermission")
