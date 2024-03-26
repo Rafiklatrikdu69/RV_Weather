@@ -190,12 +190,17 @@
                         response: Response<WeatherResponse>
                     ) {
                         if (response.isSuccessful) {
+                            Thread.sleep(1000)
+
                             val weatherResponse = response.body()
                             weatherResponse?.let { response ->
+
+
                                 binding.nomVille.text =
                                     weatherResponse.name + " : " + weatherResponse.main?.temp?.minus(
                                         273.15
                                     )?.roundToInt() + " °C"
+                                Thread.sleep(1000)
                                 val uri = Uri.parse(
                                     "https://openweathermap.org/img/w/" + weatherResponse.weather?.get(
                                         0
@@ -216,7 +221,7 @@
 
 
                                 }
-
+                                Thread.sleep(1000)
                                 binding.meteo.setImageURI(uri)
                                 Log.d(TAG, "ville: ${response.name}")
                                 Log.d(

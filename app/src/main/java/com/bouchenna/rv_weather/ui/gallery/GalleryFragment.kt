@@ -1,4 +1,4 @@
-package com.bouchenna.rv_weather.ui.gallery
+    package com.bouchenna.rv_weather.ui.gallery
 
 import YourXAxisValueFormatter
 import android.os.Bundle
