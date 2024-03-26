@@ -3,7 +3,6 @@ package com.bouchenna.rv_weather
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -14,20 +13,16 @@ import com.bouchenna.rv_weather.databinding.ActivityMainBinding
 import com.sonney.valentin.LocalisationAdapter
 import android.widget.Button
 import android.widget.ImageView
-import androidx.core.os.bundleOf
 import androidx.core.view.GravityCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bouchenna.rv_weather.service.FireBase_db
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.GeoPoint
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
 
@@ -39,7 +34,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var menuBurger: ImageView
     private lateinit var deconnexion: Button
     private lateinit var firebaseDb: FireBase_db
-//    private lateinit var mobile_navigation: NavController
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: LocalisationAdapter
     private lateinit var addLocalisation: Button
