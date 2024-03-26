@@ -77,8 +77,7 @@
         private lateinit var user: FirebaseAuth
         private var marker:Boolean= false
         private  var weatherResponse:WeatherResponse?=null
-        // This property is only valid between onCreateView and
-        // onDestroyView.
+
         private val binding get() = _binding!!
         override fun onAttach(context: Context) {
             super.onAttach(context)
@@ -110,12 +109,9 @@
                 childFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment
             mapFragment.getMapAsync { map ->
                 googleMap = map
-                //    googleMap?.uiSettings?.isZoomControlsEnabled = true
 
-                // Activer la boussole
                 googleMap?.uiSettings?.isCompassEnabled = true
 
-                // Activer la barre d'outils de carte
                 googleMap?.uiSettings?.isMapToolbarEnabled = true
                 googleMap?.setOnMapClickListener(this)
             }
@@ -138,7 +134,7 @@
             autocompleteFragment?.setOnPlaceSelectedListener(object : PlaceSelectionListener {
                 override fun onError(status: Status) {
                     Log.e(TAG, "Error occurred: $status")
-                    // Ajoutez ici le code pour gérer l'erreur, par exemple afficher un message d'erreur
+
                     Toast.makeText(requireContext(), "Error occurred: $status", Toast.LENGTH_SHORT).show()
                 }
 
@@ -147,7 +143,7 @@
                         val lating = p0.latLng
                         val cameraUpdate = CameraUpdateFactory.newLatLngZoom(lating, 15f)
                         googleMap?.moveCamera(cameraUpdate)
-                      //  binding.textHome.text = lating!!.toString()
+
                         get(lating)
 
                     }
@@ -161,12 +157,12 @@
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
 
-            // Vérifier la connectivité réseau lorsque la vue est créée
+
             checkNetworkConnectivity()
 
         }
 
-        //test.setOnClickListener { addBD() }
+
 
 
         override fun onDestroyView() {
@@ -190,7 +186,7 @@
                         response: Response<WeatherResponse>
                     ) {
                         if (response.isSuccessful) {
-                            Thread.sleep(1000)
+
 
                             val weatherResponse = response.body()
                             weatherResponse?.let { response ->
@@ -221,7 +217,7 @@
 
 
                                 }
-                                Thread.sleep(1000)
+
                                 binding.meteo.setImageURI(uri)
                                 Log.d(TAG, "ville: ${response.name}")
                                 Log.d(
@@ -230,34 +226,31 @@
                                 )
                                 binding.textView.visibility = View.VISIBLE
                                 binding.btnAdd.setOnClickListener {
-                                    // Extrayez le nom de la ville de weatherResponse
+
                                     val cityName = weatherResponse.name
 
-                                    // Extrayez les coordonnées géographiques (latitude et longitude) de weatherResponse
                                     val latitude = weatherResponse.coord?.lat
                                     val longitude = weatherResponse.coord?.lon
 
-                                    // Extrayez le pays de weatherResponse
                                     val countryName = weatherResponse.sys?.country
 
-                                    // Vérifiez si toutes les données nécessaires sont disponibles
+
                                     if (cityName != null && latitude != null && longitude != null && countryName != null) {
-                                        // Créez une instance de GeoPoint avec les coordonnées géographiques
+
                                         val geoPoint = GeoPoint(latitude, longitude)
 
-                                        // Créez une instance de Localisation avec le nom de la ville, les coordonnées géographiques et le pays
                                         val localisation =
                                             Localisation("", cityName, geoPoint, countryName)
 
-                                        // Appelez addData() de MainActivity avec l'instance de Localisation
+
                                         mainActivity.addData(localisation)
                                     } else {
-                                        // Gérez le cas où des données sont manquantes
+
                                         Log.e(
                                             TAG,
                                             "Certaines données sont manquantes dans weatherResponse."
                                         )
-                                        // Affichez un message d'erreur ou effectuez une autre action appropriée
+
                                         Toast.makeText(
                                             requireContext(),
                                             "Erreur: Certaines données sont manquantes.",

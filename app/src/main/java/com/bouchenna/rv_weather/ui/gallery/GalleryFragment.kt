@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TableRow
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -45,6 +46,8 @@ class GalleryFragment : Fragment() {
     private val BASE_URL = "https://api.openweathermap.org/data/2.5/"
     private var humidity:Int?=null
     private var lineChart: LineChart? = null
+    private var temp_max = 0.0
+    private var temp_min= 0.0
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -93,8 +96,9 @@ class GalleryFragment : Fragment() {
                         val weatherResponse = response.body()
                         val test = 12;
                         humidity = weatherResponse?.main?.humidity
-
-
+                        binding.idHumidity.text ="Humidity: " +  humidity.toString() + " %"
+                        binding.TempMin.text ="Temp Min : \n"+ weatherResponse?.main?.temp_min?.minus(273.15)?.roundToInt().toString() +" °C"
+                        binding.TempMax.text = "Temp Max : \n"+weatherResponse?.main?.temp_max?.minus(273.15)?.roundToInt().toString() +" °C"
                     }
 
                 }
@@ -113,31 +117,99 @@ class GalleryFragment : Fragment() {
                         val WeatherForecastResponse = response.body()
                         val groupedWeatherForecasts = WeatherForecastResponse?.list?.groupBy { it.dt_txt.split(" ")[0] }
 
-                        val dateFormat = SimpleDateFormat("yyyy-MM-dd")
-                        var count = 0.0
+
+                        var count = 0
                         val dataPoints = mutableListOf<DataPoint>()
+
+                        var str =""
+                        val dateFormat = SimpleDateFormat("yyyy-MM-dd")
+                        val dayFormat = SimpleDateFormat("EEEE")
                         binding.idTVHead.text = nom +" "+WeatherForecastResponse?.list?.get(0)?.main?.temp?.minus(273.15)?.roundToInt() +" °C"
+                        val headerRow = TableRow(context)
+
+
+                        val dayHeader = TextView(context).apply {
+                            text = "Day"
+                            layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                        }
+                        headerRow.addView(dayHeader)
+
+                        val humidityHeader = TextView(context).apply {
+                            text = "H"
+                            layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                        }
+                        headerRow.addView(humidityHeader)
+
+                        val tempHeader = TextView(context).apply {
+                            text = "Temp "+"\n Moyenne (°C)"
+                            layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                        }
+                        val tempMin = TextView(context).apply {
+                            text = "Temp"+"\n  Min (°C)"
+                            layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                        }
+                        val tempMax = TextView(context).apply {
+                            text = "Temp"+"\n  Max (°C)"
+                            layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                        }
+                        headerRow.addView(tempHeader)
+                        headerRow.addView(tempMin)
+                        headerRow.addView(tempMax)
+
+                        binding.tableLayout.addView(headerRow)
                         groupedWeatherForecasts?.forEach { (date, forecasts) ->
                             var tempSum = 0.0
+                            var tempMin = Double.MAX_VALUE // Initialisation de la température minimale à une valeur maximale
+                            var tempMax = Double.MIN_VALUE // Initialisation de la température maximale à une valeur minimale
 
                             forecasts.forEach { forecast ->
                                 tempSum += forecast.main.temp
+                                val temp = forecast.main.temp
+                                if (temp < tempMin) {
+                                    tempMin = temp // Met à jour la température minimale si une valeur inférieure est trouvée
+                                }
+                                if (temp > tempMax) {
+                                    tempMax = temp // Met à jour la température maximale si une valeur supérieure est trouvée
+                                }
                             }
 
-                            val averageTemp = tempSum / forecasts.size
-
-                            println("Date: $date")
-                            println("Average Temperature: ${averageTemp.minus(273.15).roundToInt()}")
-                            println()
-                            count++;
                             val formattedDate = dateFormat.parse(date)
-                            println("count :"+count)
-                            dataPoints.add(DataPoint(count, averageTemp - 273.15)) // Convertir de Kelvin à Celsius
+                            val dayOfWeek = dayFormat.format(formattedDate)
+                            val averageTemp = tempSum / forecasts.size
+                            val humidity = forecasts.map { it.main.humidity }.average().toInt()
 
-                            count++
+                            val tableRow = TableRow(context)
 
+                            val dayTextView = TextView(context)
+                            dayTextView.text = dayOfWeek
+                            dayTextView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                            tableRow.addView(dayTextView)
 
+                            val humidityTextView = TextView(context)
+                            humidityTextView.text = "$humidity %"
+                            humidityTextView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                            tableRow.addView(humidityTextView)
+
+                            val tempTextView = TextView(context)
+                            tempTextView.text = "${averageTemp.minus(273.15).roundToInt()}"
+                            tempTextView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                            tableRow.addView(tempTextView)
+
+                            val tempMinTextView = TextView(context)
+                            tempMinTextView.text = "${tempMin.minus(273.15).roundToInt()}" // Affiche la température minimale
+                            tempMinTextView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                            tableRow.addView(tempMinTextView)
+                            dataPoints.add(DataPoint(count.toDouble(), averageTemp.minus(273.15)))
+                            val tempMaxTextView = TextView(context)
+                            tempMaxTextView.text = "${tempMax.minus(273.15).roundToInt()}" // Affiche la température maximale
+                            tempMaxTextView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                            tableRow.addView(tempMaxTextView)
+                            count++;
+                            binding.tableLayout.addView(tableRow)
                         }
+
+
+                        binding.forecastTextView.text = str
                         val dataPointsArray = dataPoints.toTypedArray()
 
 
@@ -178,6 +250,8 @@ class GalleryFragment : Fragment() {
                         val airPollutionResponse = response.body()
                         val pollutionDataList = airPollutionResponse?.list
                         if (!pollutionDataList.isNullOrEmpty()) {
+                            binding.aqiProgressBar.progress =  airPollutionResponse.list.get(0).main?.aqi!!
+                            binding.aqiValueTextView.text = airPollutionResponse.list.get(0).main?.aqi.toString()
                             val pollutionData = pollutionDataList[0] // On prend la première donnée de pollution de la liste
                             val aqi = pollutionData.main?.aqi
                             val co = pollutionData.components?.co
@@ -278,7 +352,8 @@ class GalleryFragment : Fragment() {
             entriesMax.add(Entry(i.toFloat(), maxTempList[i]))
         }
 
-        // Remplissage des entrées pour les valeurs minimales
+
+
         for (i in minTempList.indices) {
             entriesMin.add(Entry(i.toFloat(), minTempList[i]))
         }
@@ -302,7 +377,7 @@ class GalleryFragment : Fragment() {
             mode = LineDataSet.Mode.CUBIC_BEZIER
         }
 
-        // Création de la liste des DataSet
+
         val dataSets = ArrayList<ILineDataSet>()
         dataSets.add(dataSetMax)
         dataSets.add(dataSetMin)
