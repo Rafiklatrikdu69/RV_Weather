@@ -1,14 +1,14 @@
     package com.bouchenna.rv_weather.ui.home
 
 
-    import android.Manifest
     import android.annotation.SuppressLint
     import android.app.NotificationChannel
     import android.app.NotificationManager
     import android.app.PendingIntent
     import android.content.Context
     import android.content.Intent
-    import android.content.pm.PackageManager
+    import android.graphics.Bitmap
+    import android.graphics.BitmapFactory
     import android.net.ConnectivityManager
     import android.net.NetworkCapabilities
     import android.net.Uri
@@ -18,34 +18,36 @@
     import android.view.LayoutInflater
     import android.view.View
     import android.view.ViewGroup
-    import android.widget.ImageView
+    import android.widget.Button
     import android.widget.TextView
     import android.widget.Toast
     import androidx.appcompat.app.AlertDialog
-    import androidx.core.app.ActivityCompat
     import androidx.core.app.NotificationCompat
     import androidx.core.app.NotificationManagerCompat
-    import androidx.core.content.ContextCompat.getSystemService
     import androidx.fragment.app.Fragment
     import androidx.lifecycle.ViewModelProvider
+    import com.bouchenna.rv_weather.Localisation
+    import com.bouchenna.rv_weather.MainActivity
     import com.bouchenna.rv_weather.R
     import com.bouchenna.rv_weather.WeatherResponse
     import com.bouchenna.rv_weather.databinding.FragmentHomeBinding
-    import com.bouchenna.rv_weather.service.Api_Weather
+    import com.bouchenna.rv_weather.service.WeatherApiService
     import com.bumptech.glide.Glide
-    import com.google.android.gms.common.api.Api
     import com.google.android.gms.common.api.Status
     import com.google.android.gms.maps.CameraUpdateFactory
     import com.google.android.gms.maps.GoogleMap
     import com.google.android.gms.maps.OnMapReadyCallback
     import com.google.android.gms.maps.SupportMapFragment
-    import com.google.android.gms.maps.UiSettings
     import com.google.android.gms.maps.model.LatLng
+    import com.google.android.gms.maps.model.MarkerOptions
     import com.google.android.libraries.places.api.Places
     import com.google.android.libraries.places.api.model.Place
     import com.google.android.libraries.places.widget.AutocompleteSupportFragment
     import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
-    import com.google.android.material.snackbar.Snackbar
+    import com.google.firebase.auth.FirebaseAuth
+    import com.google.firebase.auth.ktx.auth
+    import com.google.firebase.firestore.GeoPoint
+    import com.google.firebase.ktx.Firebase
     import retrofit2.Call
     import retrofit2.Callback
     import retrofit2.Response
@@ -53,23 +55,16 @@
     import retrofit2.converter.gson.GsonConverterFactory
     import retrofit2.http.GET
     import retrofit2.http.Query
+    import java.io.BufferedInputStream
+    import java.io.IOException
+    import java.net.URL
     import kotlin.math.roundToInt
-    import android.widget.Button
-    import com.google.android.gms.maps.model.MarkerOptions
-    import com.google.firebase.auth.FirebaseAuth
-    import com.google.firebase.auth.ktx.auth
-    import com.google.firebase.ktx.Firebase
 
-    class HomeFragment : Fragment() , OnMapReadyCallback, GoogleMap.OnMapClickListener {
-        interface WeatherApiService {
-            @GET("weather")
-            fun getWeather(
-                @Query("lat") lat: Double,
-                @Query("lon") long: Double,
-                @Query("appid") apiKey: String
-            ): Call<WeatherResponse>
-        }
 
+    class HomeFragment (): Fragment() , OnMapReadyCallback, GoogleMap.OnMapClickListener {
+
+
+        private lateinit var mainActivity: MainActivity
         val CHANNEL_ID = "pickerChannel"
         private var googleMap: GoogleMap? = null
         private val URL =
@@ -81,10 +76,18 @@
         private lateinit var test: Button
         private lateinit var user: FirebaseAuth
         private var marker:Boolean= false
+        private  var weatherResponse:WeatherResponse?=null
         // This property is only valid between onCreateView and
         // onDestroyView.
         private val binding get() = _binding!!
-
+        override fun onAttach(context: Context) {
+            super.onAttach(context)
+            if (context is MainActivity) {
+                mainActivity = context
+            } else {
+                throw IllegalStateException("Parent activity must be MainActivity")
+            }
+        }
         override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -187,37 +190,36 @@
                         response: Response<WeatherResponse>
                     ) {
                         if (response.isSuccessful) {
+                            Thread.sleep(1000)
+
                             val weatherResponse = response.body()
                             weatherResponse?.let { response ->
+
+
                                 binding.nomVille.text =
                                     weatherResponse.name + " : " + weatherResponse.main?.temp?.minus(
                                         273.15
                                     )?.roundToInt() + " °C"
+                                Thread.sleep(1000)
                                 val uri = Uri.parse(
-                                    "http://openweathermap.org/img/w/" + weatherResponse.weather?.get(
+                                    "https://openweathermap.org/img/w/" + weatherResponse.weather?.get(
                                         0
                                     )?.icon + ".png"
                                 )
-                                Log.d("img", uri.toString())
+                               // Log.d("img", uri.toString())
                                 context?.let {
-                                    val uri = Uri.parse(
-                                        "https://openweathermap.org/img/w/" + weatherResponse.weather?.get(
-                                            0
-                                        )?.icon + ".png"
-                                    )
-                                    Log.d("img", uri.toString())
+
                                     val imageView = binding.meteo
-                                    context?.let {
-                                        if (imageView != null) {
-                                            Log.d("images", "pas null")
-                                            Glide.with(it)
-                                                .load(uri)
-                                                .into(imageView)
-                                        }
+                                    if (imageView != null) {
+                                        //Log.d("images", "pas null"+uri.toString())
+
+                                        Glide.with(it)
+                                            .load(uri)
+                                            .into(imageView)
                                     }
 
                                 }
-
+                                Thread.sleep(1000)
                                 binding.meteo.setImageURI(uri)
                                 Log.d(TAG, "ville: ${response.name}")
                                 Log.d(
@@ -225,20 +227,72 @@
                                     "coord: ${response.coord?.lon} et ${response.coord?.lat}"
                                 )
                                 binding.textView.visibility = View.VISIBLE
+                                binding.btnAdd.setOnClickListener {
+                                    // Extrayez le nom de la ville de weatherResponse
+                                    val cityName = weatherResponse.name
 
-                                //showWeatherPopup(weatherResponse);
+                                    // Extrayez les coordonnées géographiques (latitude et longitude) de weatherResponse
+                                    val latitude = weatherResponse.coord?.lat
+                                    val longitude = weatherResponse.coord?.lon
+
+                                    // Extrayez le pays de weatherResponse
+                                    val countryName = weatherResponse.sys?.country
+
+                                    // Vérifiez si toutes les données nécessaires sont disponibles
+                                    if (cityName != null && latitude != null && longitude != null && countryName != null) {
+                                        // Créez une instance de GeoPoint avec les coordonnées géographiques
+                                        val geoPoint = GeoPoint(latitude, longitude)
+
+                                        // Créez une instance de Localisation avec le nom de la ville, les coordonnées géographiques et le pays
+                                        val localisation =
+                                            Localisation("", cityName, geoPoint, countryName)
+
+                                        // Appelez addData() de MainActivity avec l'instance de Localisation
+                                        mainActivity.addData(localisation)
+                                    } else {
+                                        // Gérez le cas où des données sont manquantes
+                                        Log.e(
+                                            TAG,
+                                            "Certaines données sont manquantes dans weatherResponse."
+                                        )
+                                        // Affichez un message d'erreur ou effectuez une autre action appropriée
+                                        Toast.makeText(
+                                            requireContext(),
+                                            "Erreur: Certaines données sont manquantes.",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                    }
+                                }
                             }
-                        } else {
+
+                            } else {
                             Log.e(TAG, "Failed to get weather data: ${response.code()}")
                         }
+
                     }
 
                     override fun onFailure(call: Call<WeatherResponse>, t: Throwable) {
                         Log.e(TAG, "Error fetching weather data", t)
                     }
                 })
-        }
 
+        }
+        private fun getImageBitmap(url: String): Bitmap? {
+            var bm: Bitmap? = null
+            try {
+                val aURL = URL(url)
+                val conn = aURL.openConnection()
+                conn.connect()
+                val `is` = conn.getInputStream()
+                val bis = BufferedInputStream(`is`)
+                bm = BitmapFactory.decodeStream(bis)
+                bis.close()
+                `is`.close()
+            } catch (e: IOException) {
+                Log.e(TAG, "Error getting bitmap", e)
+            }
+            return bm
+        }
         private fun showWeatherPopup(weatherResponse: WeatherResponse) {
             val dialogBuilder = AlertDialog.Builder(requireContext())
             val message = "Country: ${weatherResponse.sys?.country}\n" +
@@ -321,6 +375,7 @@
 
 
         }
+
 
 
         override fun onMapClick(point: LatLng) {

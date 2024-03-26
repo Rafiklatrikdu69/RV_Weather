@@ -5,52 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="10dp">
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/idTVHead"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="200dp"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/blue_8"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-        <!-- Ajoutez vos éléments RelativeLayout ici -->
-
-        <TextView
-            android:id="@+id/idTVHead"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="4dp"
-            android:gravity="center"
-            android:padding="4dp"
-            android:text="@string/app_name"
-            android:textAlignment="center"
-            android:textColor="@color/blue_8"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <com.jjoe64.graphview.GraphView
-            android:id="@+id/idGraphView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/idTVHead" />
-
-    </RelativeLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/idGraphView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.gallery.GalleryFragment">
+        android:layout_height="150dp" />
 
-        <!-- Ajoutez vos éléments ConstraintLayout ici -->
 
-        <TextView
-            android:id="@+id/text_gallery"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_weight="1"
+        android:layout_centerInParent="true" />
+
+
 </LinearLayout>
