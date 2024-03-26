@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    tools:ignore="ExtraText">
 
     <fragment
         android:id="@+id/autocomplete_fragment"
@@ -19,35 +20,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <fragment
-        android:id="@+id/map_fragment"
-        class="com.google.android.gms.maps.SupportMapFragment"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/bottomAppBar"
         app:layout_constraintTop_toBottomOf="@id/autocomplete_fragment"
+        app:layout_constraintBottom_toTopOf="@id/bottomAppBar"
         app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="2dp" />
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:ignore="NotSibling">
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="409dp"
-        android:layout_height="41dp"
-        android:padding="10dp"
+        <fragment
+            android:id="@+id/map_fragment"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomAppBarCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/menu_bottom_app_bar"
-        tools:ignore="BottomAppBar" />
+        app:cardElevation="8dp"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/menu_bottom_app_bar"
+            tools:ignore="BottomAppBar" />
+    </androidx.cardview.widget.CardView>
+
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
+        app:cardCornerRadius="20dp"
         app:cardElevation="16dp"
-        app:layout_constraintBottom_toTopOf="@id/bottomAppBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomAppBarCardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="NotSibling">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -57,8 +78,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginLeft="30dp"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                tools:ignore="MissingConstraints">
                 <ImageView
                     android:id="@+id/meteo"
                     android:layout_width="44dp"
@@ -67,20 +88,20 @@
                     android:layout_marginEnd="0dp" />
                 <TextView
                     android:id="@+id/nomVille"
-                    android:layout_width="108dp"
-                    android:layout_height="46dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="Aucune ville" />
-
-
+                    android:gravity="center"
+                    android:text="Aucune ville" />
 
                 <Button
                     android:id="@+id/btnAdd"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:hint="Ajouter"
-                    android:textColor="@color/white"
-                    />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="Ajouter"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
