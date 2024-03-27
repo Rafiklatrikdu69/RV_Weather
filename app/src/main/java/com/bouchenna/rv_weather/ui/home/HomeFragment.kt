@@ -317,7 +317,7 @@
 
 
         fun createNotificationChannel(context: Context) {
-            // Create the notification channel if needed for O OS and above.
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 val name = "channel_name"
                 val descriptionText = "description"
@@ -326,13 +326,13 @@
                 val notificationManager: NotificationManager =
                     context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-                // Check if the channel already exists
+
                 if (notificationManager.getNotificationChannel(CHANNEL_ID) == null) {
                     Log.d("channel", "pas null !")
                     val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
                         description = descriptionText
                     }
-                    // Register the channel with the system.
+
                     notificationManager.createNotificationChannel(channel)
                 }
             }
@@ -345,11 +345,11 @@
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
                 .setContentTitle("This is title")
                 .setContentText("This is content")
-                .setPriority(NotificationCompat.PRIORITY_HIGH) // Priorité élevée
-                .setAutoCancel(true) // Fermer automatiquement la notification lorsque l'utilisateur clique dessus
-                .setTicker("Notification text scrolling...") // Texte de défilement
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setAutoCancel(true)
+                .setTicker("Notification text scrolling...")
 
-            // Créer une intention pour ouvrir l'activité lorsque l'utilisateur clique sur la notification
+
             val intent = Intent(requireContext(), HomeFragment::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             }
@@ -357,10 +357,9 @@
                 PendingIntent.getActivity(requireContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE)
             builder.setContentIntent(pendingIntent)
 
-            // Construire la notification
+
             val notification = builder.build()
 
-            // Afficher la notification
             val notificationManager = NotificationManagerCompat.from(requireContext())
 
             notificationManager.notify(0, notification)

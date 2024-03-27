@@ -157,17 +157,17 @@ class GalleryFragment : Fragment() {
                         binding.tableLayout.addView(headerRow)
                         groupedWeatherForecasts?.forEach { (date, forecasts) ->
                             var tempSum = 0.0
-                            var tempMin = Double.MAX_VALUE // Initialisation de la température minimale à une valeur maximale
-                            var tempMax = Double.MIN_VALUE // Initialisation de la température maximale à une valeur minimale
+                            var tempMin = Double.MAX_VALUE
+                            var tempMax = Double.MIN_VALUE
 
                             forecasts.forEach { forecast ->
                                 tempSum += forecast.main.temp
                                 val temp = forecast.main.temp
                                 if (temp < tempMin) {
-                                    tempMin = temp // Met à jour la température minimale si une valeur inférieure est trouvée
+                                    tempMin = temp
                                 }
                                 if (temp > tempMax) {
-                                    tempMax = temp // Met à jour la température maximale si une valeur supérieure est trouvée
+                                    tempMax = temp
                                 }
                             }
 
@@ -191,12 +191,12 @@ class GalleryFragment : Fragment() {
 
 
                             val tempMinTextView = TextView(context)
-                            tempMinTextView.text = "${tempMin.minus(273.15).roundToInt()}" // Affiche la température minimale
+                            tempMinTextView.text = "${tempMin.minus(273.15).roundToInt()}"
                             tempMinTextView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
                             tableRow.addView(tempMinTextView)
                             dataPoints.add(DataPoint(count.toDouble(), averageTemp.minus(273.15)))
                             val tempMaxTextView = TextView(context)
-                            tempMaxTextView.text = "${tempMax.minus(273.15).roundToInt()}" // Affiche la température maximale
+                            tempMaxTextView.text = "${tempMax.minus(273.15).roundToInt()}"
                             tempMaxTextView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
                             tableRow.addView(tempMaxTextView)
                             count++;
@@ -248,7 +248,7 @@ class GalleryFragment : Fragment() {
                         if (!pollutionDataList.isNullOrEmpty()) {
                             binding.aqiProgressBar.progress =  airPollutionResponse.list.get(0).main?.aqi!!
                             binding.aqiValueTextView.text = airPollutionResponse.list.get(0).main?.aqi.toString()
-                            val pollutionData = pollutionDataList[0] // On prend la première donnée de pollution de la liste
+                            val pollutionData = pollutionDataList[0]
                             val aqi = pollutionData.main?.aqi
                             val co = pollutionData.components?.co
                             val no = pollutionData.components?.no
@@ -306,7 +306,7 @@ class GalleryFragment : Fragment() {
 
 
                 override fun onFailure(call: Call<AirPollutionResponse>, t: Throwable) {
-                    // Gérer les cas d'échec de la requête
+
                 }
             })
         lineChart =binding.lineChart
@@ -321,7 +321,7 @@ class GalleryFragment : Fragment() {
         _binding = null
     }
     private fun setupLineChart() {
-        // Configuration du LineChart
+
         lineChart?.apply {
             setTouchEnabled(true)
             isDragEnabled = true
@@ -356,11 +356,11 @@ class GalleryFragment : Fragment() {
             entriesMin.add(Entry(i.toFloat(), minTempList[i]))
         }
 
-        // Création des DataSet pour les valeurs maximales et minimales
+
         val dataSetMax = LineDataSet(entriesMax, "so2")
         val dataSetMin = LineDataSet(entriesMin, "nh3")
 
-        // Configuration des couleurs et du style des DataSet
+
         dataSetMax.apply {
             color = ColorTemplate.COLORFUL_COLORS[0]
             setCircleColor(ColorTemplate.COLORFUL_COLORS[0])
