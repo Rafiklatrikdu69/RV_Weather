@@ -102,6 +102,7 @@ class MainActivity : AppCompatActivity() {
             Firebase.auth.signOut()
             val intent = Intent(this, ConnexionActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         menuBurger.setOnClickListener {

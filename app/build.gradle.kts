@@ -11,6 +11,7 @@ android {
         viewBinding = true
         dataBinding = true // Ajoutez cette ligne pour activer la liaison de données
     }
+
     defaultConfig {
         applicationId = "com.bouchenna.rv_weather"
         minSdk = 28
@@ -29,6 +30,7 @@ android {
                 "proguard-rules.pro"
             )
         }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -50,6 +52,7 @@ dependencies {
     implementation ("com.google.android.gms:play-services-maps:17.0.0")
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
 
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -73,7 +76,6 @@ dependencies {
     implementation ("com.google.firebase:firebase-database-ktx:20.0.2")
     implementation("com.google.firebase:firebase-messaging")
     implementation("com.google.firebase:firebase-analytics")
-
 
 
     testImplementation("junit:junit:4.13.2")

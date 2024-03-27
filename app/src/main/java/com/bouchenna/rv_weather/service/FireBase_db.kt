@@ -55,13 +55,15 @@ class FireBase_db {
 
     suspend fun deleteLocalisation(loc: Localisation){
 
-        db.collection("Localisation").document(loc.documentId)
-            .delete()
-            .addOnSuccessListener {
-                Log.d(TAG, "DocumentSnapshot successfully deleted!")
-            }
-            .addOnFailureListener { e ->
-                Log.w(TAG, "Error deleting document", e)
-            }
+        loc.documentId?.let {
+            db.collection("Localisation").document(it)
+                .delete()
+                .addOnSuccessListener {
+                    Log.d(TAG, "DocumentSnapshot successfully deleted!")
+                }
+                .addOnFailureListener { e ->
+                    Log.w(TAG, "Error deleting document", e)
+                }
+        }
     }
 }
