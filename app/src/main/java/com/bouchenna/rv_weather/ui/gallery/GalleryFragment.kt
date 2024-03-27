@@ -30,6 +30,7 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.jjoe64.graphview.series.DataPoint
 import com.jjoe64.graphview.GraphView
+import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter
 import com.jjoe64.graphview.series.LineGraphSeries
 import retrofit2.Call
 import retrofit2.Callback
@@ -81,12 +82,13 @@ class GalleryFragment : Fragment() {
         galleryViewModel.text.observe(viewLifecycleOwner) {
 
         }
-        lineGraphView = binding.idGraphView
+//        lineGraphView = binding.idGraphView
 
 
 
 
         val pieChart = binding.pieChart
+
         api.getWeather(latitude!!, longitude!!, "e3b787e83e7b983adeca31847414a20e")
             .enqueue(object : Callback<WeatherResponse> {
                 override fun onResponse(
@@ -97,7 +99,7 @@ class GalleryFragment : Fragment() {
                         val weatherResponse = response.body()
                         val test = 12;
                         humidity = weatherResponse?.main?.humidity
-                        binding.idHumidity.text ="Humidity: " +  humidity.toString() + " %"
+                        binding.idHumidity.text ="Humidity: \n" +  humidity.toString() + " %"
                         binding.TempMin.text ="Temp Min : \n"+ weatherResponse?.main?.temp_min?.minus(273.15)?.roundToInt().toString() +" °C"
                         binding.TempMax.text = "Temp Max : \n"+weatherResponse?.main?.temp_max?.minus(273.15)?.roundToInt().toString() +" °C"
                     }
@@ -122,10 +124,10 @@ class GalleryFragment : Fragment() {
                         var count = 0
                         val dataPoints = mutableListOf<DataPoint>()
 
-                        var str =""
                         val dateFormat = SimpleDateFormat("yyyy-MM-dd")
                         val dayFormat = SimpleDateFormat("EEEE")
-                        binding.idTVHead.text = nom +" "+WeatherForecastResponse?.list?.get(0)?.main?.temp?.minus(273.15)?.roundToInt() +" °C"
+                        binding.idTVHead.text = nom
+                        binding.tempTextView.text = WeatherForecastResponse?.list?.get(0)?.main?.temp?.minus(273.15)?.roundToInt().toString() + " °C"
                         val headerRow = TableRow(context)
 
 
@@ -204,27 +206,22 @@ class GalleryFragment : Fragment() {
                         }
 
 
-                        binding.forecastTextView.text = str
-                        val dataPointsArray = dataPoints.toTypedArray()
+//                        val dataPointsArray = dataPoints.toTypedArray()
 
 
 
-                        val series = LineGraphSeries(dataPointsArray)
-                        lineGraphView.addSeries(series)
-                        lineGraphView.animate()
-                        lineGraphView.gridLabelRenderer.horizontalAxisTitle = "Date"
-                        lineGraphView.gridLabelRenderer.verticalAxisTitle = "Température (°C)"
-                        lineGraphView.viewport.isScrollable = true
-                        lineGraphView.viewport.isScrollable = true
-
-
-                        lineGraphView.viewport.isScalable = true
-
-                        lineGraphView.viewport.setScalableY(true)
-                        lineGraphView.viewport.setScrollableY(true)
-
-
-
+//                        val simpleDateFormat = SimpleDateFormat("dd/MM")
+//                        val series = LineGraphSeries(dataPointsArray)
+//                        lineGraphView.addSeries(series)
+//                        lineGraphView.gridLabelRenderer.horizontalAxisTitle = "Date"
+//                        lineGraphView.gridLabelRenderer.verticalAxisTitle = "Température (°C)"
+//                        lineGraphView.viewport.isScrollable = true
+//                        lineGraphView.viewport.isScalable = true
+//                        lineGraphView.viewport.setScalableY(true)
+//                        lineGraphView.viewport.setScrollableY(true)
+//
+//                        val labelFormatter = DateAsXAxisLabelFormatter(context, simpleDateFormat)
+//                        lineGraphView.gridLabelRenderer.labelFormatter = labelFormatter
 
 
                     }
