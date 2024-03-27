@@ -1,6 +1,7 @@
     package com.bouchenna.rv_weather.ui.gallery
 
 import YourXAxisValueFormatter
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -140,10 +141,7 @@ class GalleryFragment : Fragment() {
                         }
                         headerRow.addView(humidityHeader)
 
-                        val tempHeader = TextView(context).apply {
-                            text = "Temp "+"\n Moyenne (°C)"
-                            layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
-                        }
+
                         val tempMin = TextView(context).apply {
                             text = "Temp"+"\n  Min (°C)"
                             layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
@@ -152,7 +150,7 @@ class GalleryFragment : Fragment() {
                             text = "Temp"+"\n  Max (°C)"
                             layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
                         }
-                        headerRow.addView(tempHeader)
+
                         headerRow.addView(tempMin)
                         headerRow.addView(tempMax)
 
@@ -190,10 +188,7 @@ class GalleryFragment : Fragment() {
                             humidityTextView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
                             tableRow.addView(humidityTextView)
 
-                            val tempTextView = TextView(context)
-                            tempTextView.text = "${averageTemp.minus(273.15).roundToInt()}"
-                            tempTextView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
-                            tableRow.addView(tempTextView)
+
 
                             val tempMinTextView = TextView(context)
                             tempMinTextView.text = "${tempMin.minus(273.15).roundToInt()}" // Affiche la température minimale
@@ -211,6 +206,7 @@ class GalleryFragment : Fragment() {
 
                         binding.forecastTextView.text = str
                         val dataPointsArray = dataPoints.toTypedArray()
+
 
 
                         val series = LineGraphSeries(dataPointsArray)
@@ -274,13 +270,13 @@ class GalleryFragment : Fragment() {
                                 so2Values.add(so2)
                             }
 
-                            val maxTempList = nh3Values + so2Values
-                            val minTempList = nh3Values + so2Values
+                            val maxTempList = so2Values
+                            val minTempList = nh3Values
 
                             setTemperatureData(maxTempList, minTempList)
 
 
-                            // Création des entrées pour le Pie Chart
+
                             val entries = mutableListOf<PieEntry>()
                             entries.add(PieEntry(co!!.toFloat(), "CO")) // Monoxyde de carbone
                             entries.add(PieEntry(no2!!.toFloat(), "NO2")) // Dioxyde d'azote
@@ -290,14 +286,17 @@ class GalleryFragment : Fragment() {
                             entries.add(PieEntry(pm10!!.toFloat(), "PM10")) // Particules en suspension (PM10)
                             entries.add(PieEntry(nh3!!.toFloat(), "NH3")) // Ammoniac
 */
-                            // Création du dataset pour le Pie Chart
+
                             val dataSet = PieDataSet(entries, "Air Pollution Components")
                             dataSet.colors = ColorTemplate.MATERIAL_COLORS.toList()
 
-                            // Création des données à afficher dans le Pie Chart
                             val data = PieData(dataSet)
-
-                            // Paramétrage du Pie Chart
+                            pieChart.apply {
+                                description.isEnabled = true
+                                description.text = "Diagramme de Pollution"
+                                description.textColor = Color.BLACK
+                                description.setPosition(300f,100f)
+                            }
                             pieChart.data = data
                             pieChart.invalidate()
                         }
@@ -347,7 +346,6 @@ class GalleryFragment : Fragment() {
         val entriesMax = ArrayList<Entry>()
         val entriesMin = ArrayList<Entry>()
 
-        // Remplissage des entrées pour les valeurs maximales
         for (i in maxTempList.indices) {
             entriesMax.add(Entry(i.toFloat(), maxTempList[i]))
         }
@@ -359,8 +357,8 @@ class GalleryFragment : Fragment() {
         }
 
         // Création des DataSet pour les valeurs maximales et minimales
-        val dataSetMax = LineDataSet(entriesMax, "Max Temp")
-        val dataSetMin = LineDataSet(entriesMin, "Min Temp")
+        val dataSetMax = LineDataSet(entriesMax, "so2")
+        val dataSetMin = LineDataSet(entriesMin, "nh3")
 
         // Configuration des couleurs et du style des DataSet
         dataSetMax.apply {
@@ -369,6 +367,7 @@ class GalleryFragment : Fragment() {
             valueTextSize = 10f
             mode = LineDataSet.Mode.CUBIC_BEZIER
         }
+
 
         dataSetMin.apply {
             color = ColorTemplate.COLORFUL_COLORS[1]
@@ -382,15 +381,23 @@ class GalleryFragment : Fragment() {
         dataSets.add(dataSetMax)
         dataSets.add(dataSetMin)
 
-        // Création de LineData à partir des DataSet
         val data = LineData(dataSets)
 
-        // Configuration des données sur le LineChart
         lineChart?.data = data
+
+        lineChart?.apply {
+            val title = "Graphique du so2 et nh3"
+            description.textColor = Color.BLACK
+            description.textSize = 14f
+            description.isEnabled = true
+            description.text = title
+            description.setPosition(500f, 50f)
+        }
+
         lineChart?.invalidate()
     }
 
-    // Fonction pour définir les données de température maximale et minimale
+
     fun setTemperatureData(maxTempList: List<Float>, minTempList: List<Float>) {
         setData(maxTempList, minTempList)
     }
