@@ -2,6 +2,7 @@
 
 import YourXAxisValueFormatter
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ import com.bouchenna.rv_weather.WeatherForecastResponse
 import com.bouchenna.rv_weather.WeatherResponse
 import com.bouchenna.rv_weather.databinding.FragmentGalleryBinding
 import com.bouchenna.rv_weather.service.WeatherApiService
+import com.bumptech.glide.Glide
 
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
@@ -102,6 +104,20 @@ class GalleryFragment : Fragment() {
                         binding.idHumidity.text ="Humidity: \n" +  humidity.toString() + " %"
                         binding.TempMin.text ="Temp Min : \n"+ weatherResponse?.main?.temp_min?.minus(273.15)?.roundToInt().toString() +" °C"
                         binding.TempMax.text = "Temp Max : \n"+weatherResponse?.main?.temp_max?.minus(273.15)?.roundToInt().toString() +" °C"
+                        val uri = Uri.parse(
+                            "https://openweathermap.org/img/w/" + weatherResponse?.weather?.get(
+                                0
+                            )?.icon + ".png"
+                        )
+                        val imageView = binding.icone
+                        if (imageView != null) {
+                            //Log.d("images", "pas null"+uri.toString())
+                            context?.let {
+                                Glide.with(it)
+                                    .load(uri)
+                                    .into(imageView)
+                            }
+                        }
                     }
 
                 }
@@ -129,7 +145,7 @@ class GalleryFragment : Fragment() {
                         binding.idTVHead.text = nom
                         binding.tempTextView.text = WeatherForecastResponse?.list?.get(0)?.main?.temp?.minus(273.15)?.roundToInt().toString() + " °C"
                         val headerRow = TableRow(context)
-
+                        binding.description.text = WeatherForecastResponse?.list?.get(0)?.weather?.get(0)?.description + "\n"
 
                         val dayHeader = TextView(context).apply {
                             text = "Day"

@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = LocalisationAdapter(this)
         recyclerView.adapter = adapter
+
         addLocalisation = binding.menuCustomInclude.addLocButton
 
         requestPermissionLauncher =
