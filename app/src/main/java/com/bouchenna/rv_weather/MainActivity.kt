@@ -113,20 +113,20 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(R.id.nav_home)
         }
 
-        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
-            if (!task.isSuccessful) {
-                Log.w(TAG, "Fetching FCM registration token failed", task.exception)
-                return@OnCompleteListener
-            }
-
-            // Get new FCM registration token
-            val token = task.result
-
-            // Log and toast
-
-            Log.d("token", " token : $token" )
-
-        })
+//        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+//            if (!task.isSuccessful) {
+//                Log.w(TAG, "Fetching FCM registration token failed", task.exception)
+//                return@OnCompleteListener
+//            }
+//
+//            // Get new FCM registration token
+//            val token = task.result
+//
+//            // Log and toast
+//
+//            Log.d("token", " token : $token" )
+//
+//        })
 
     }
 
@@ -219,10 +219,9 @@ class MainActivity : AppCompatActivity() {
             ) -> {
                 showSnackbar(
                     view,
-                   "null",// getString(R.string.permission_notification_required),
+                    getString(R.string.permission_notification_required),
                     Snackbar.LENGTH_INDEFINITE,
-                  //  getString(R.string.ok)
-                    ""
+                   getString(R.string.ok)
                 ) {
 
                     requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
@@ -249,11 +248,10 @@ class MainActivity : AppCompatActivity() {
             ) -> {
                 showSnackbar(
                     view,
-                        "null",0,null,
+                    getString(R.string.permission_internet_required),
+                    Snackbar.LENGTH_INDEFINITE,
+                    getString(R.string.ok)
                 ) {
-                    /*     getString(R.string.permission_internet_required),
-                                       Snackbar.LENGTH_INDEFINITE,
-                                       getString(R.string.ok)"*/
                     requestPermissionLauncher.launch(Manifest.permission.INTERNET)
                 }
             }
