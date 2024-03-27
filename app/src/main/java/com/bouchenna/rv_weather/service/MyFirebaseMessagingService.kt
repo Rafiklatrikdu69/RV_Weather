@@ -14,6 +14,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
 
 class MyFirebaseMessagingService : FirebaseMessagingService()  {
 
@@ -52,6 +53,17 @@ class MyFirebaseMessagingService : FirebaseMessagingService()  {
 
         Log.d("messagerie", "showMessagerie : $title")
 
+        // Création du canal de notification pour Android Oreo et versions supérieures
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(
+                channelId,
+                "Channel Name",
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
+            val notificationManager =
+                context.getSystemService(NotificationManager::class.java)
+            notificationManager.createNotificationChannel(channel)
+        }
 
         // Création de la notification
         val builder = NotificationCompat.Builder(context, channelId)
@@ -59,22 +71,22 @@ class MyFirebaseMessagingService : FirebaseMessagingService()  {
             .setContentTitle(title) // Titre de la notification
             .setContentText(body) // Texte de la notification
             .setPriority(NotificationCompat.PRIORITY_DEFAULT) // Priorité de la notification
+        
 
         val notificationManager = NotificationManagerCompat.from(context)
 
-        if (ActivityCompat.checkSelfPermission(
-                this,
+        // Vérification de la permission pour afficher des notifications
+        if (ContextCompat.checkSelfPermission(
+                context,
                 Manifest.permission.POST_NOTIFICATIONS
-            ) != PackageManager.PERMISSION_GRANTED
+            ) == PackageManager.PERMISSION_GRANTED
         ) {
-            Log.d("perm ", "perm DEnied")
-            return
-        }
-        else{
             Log.d("perm ", "perm good")
             notificationManager.notify(notificationId, builder.build())
+        } else {
+            Log.d("perm ", "perm denied")
         }
-
     }
+
 
 }
