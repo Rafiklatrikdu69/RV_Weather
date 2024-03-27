@@ -153,11 +153,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showMmeteo(loc: Localisation): Boolean {
+        var lat = loc.coord!!.latitude
+        var long = loc.coord!!.longitude
 
         val bundle = Bundle().apply {
             putString("nom", loc.nom)
-            putDouble("long", loc.coord.longitude)
-            putDouble("lat", loc.coord.latitude)
+            putDouble("long", long)
+            putDouble("lat", lat)
         }
         navController.navigate(R.id.action_nav_home_to_nav_gallery, bundle)
 
