@@ -48,6 +48,7 @@ dependencies {
     annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation ("com.google.android.gms:play-services-maps:17.0.0")
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
 
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
@@ -70,6 +71,8 @@ dependencies {
     implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation ("com.google.firebase:firebase-database-ktx:20.0.2")
+    implementation("com.google.firebase:firebase-messaging")
+    implementation("com.google.firebase:firebase-analytics")
 
 
 
