@@ -14,4 +14,11 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="ok">OK</string>
+    <string name="permission_internet_granted">Permission INTERNET accordée.</string>
+    <string name="permission_internet_required">La permission INTERNET est requise pour le bon fonctionnement de l\'application.</string>
+    <string name="permission_notification_granted">Permission NOTIFICATION accordée.</string>
+    <string name="permission_notification_required">La permission NOTIFICATION est requise pour le bon fonctionnement de l\'application.</string>
 </resources>
