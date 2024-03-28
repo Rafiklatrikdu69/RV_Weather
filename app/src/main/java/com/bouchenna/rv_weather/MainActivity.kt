@@ -1,23 +1,22 @@
 package com.bouchenna.rv_weather
 
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.View
+import android.net.wifi.WifiManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.bouchenna.rv_weather.databinding.ActivityMainBinding
-import com.sonney.valentin.LocalisationAdapter
+import com.bouchenna.rv_weather.models.LocalisationAdapter
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -28,20 +27,24 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bouchenna.rv_weather.service.FireBase_db
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.messaging.FirebaseMessaging
-import com.google.firebase.messaging.FirebaseMessagingService
 import kotlinx.coroutines.launch
 import android.Manifest
+import android.widget.ImageButton
 import androidx.activity.result.ActivityResultLauncher
+import com.bouchenna.rv_weather.connexion.ConnexionActivity
+import com.bouchenna.rv_weather.models.Localisation
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 
 
 class MainActivity : AppCompatActivity() {
-
+    lateinit var wifiManager: WifiManager
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private val PERMISSION_REQUEST_CODE = 1001
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var user: FirebaseAuth
@@ -57,13 +60,15 @@ class MainActivity : AppCompatActivity() {
     private var locs: ArrayList<Localisation> = ArrayList()
     private lateinit var requestPermissionLauncher: ActivityResultLauncher<String>
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
+
+
+
         navController = navHostFragment.navController
         menuBurger = binding.menuBurgerImageView
         drawerLayout = binding.drawerLayout
@@ -74,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = LocalisationAdapter(this)
         recyclerView.adapter = adapter
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         addLocalisation = binding.menuCustomInclude.addLocButton
 
@@ -110,28 +116,22 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
+
+
+
         addLocalisation.setOnClickListener {
             navController.navigate(R.id.nav_home)
         }
+        findViewById<ImageButton>(R.id.map).setOnClickListener {
+            navController.navigate(R.id.nav_home)
+        }
 
-//        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
-//            if (!task.isSuccessful) {
-//                Log.w(TAG, "Fetching FCM registration token failed", task.exception)
-//                return@OnCompleteListener
-//            }
-//
-//            // Get new FCM registration token
-//            val token = task.result
-//
-//            // Log and toast
-//
-//            Log.d("token", " token : $token" )
-//
-//        })
 
     }
 
-
+fun getBinding(): ActivityMainBinding {
+    return binding
+}
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
@@ -264,6 +264,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun getLocPerm(): FusedLocationProviderClient {
+        return fusedLocationClient
+    }
 
     fun showSnackbar(
         view: View,

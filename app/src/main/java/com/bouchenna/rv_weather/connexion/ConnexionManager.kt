@@ -1,4 +1,4 @@
-package com.bouchenna.rv_weather
+package com.bouchenna.rv_weather.connexion
 import com.firebase.ui.auth.AuthUI
 
 class ConnexionManager {

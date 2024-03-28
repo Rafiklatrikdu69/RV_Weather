@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -33,11 +37,11 @@
             android:exported="true"
             android:theme="@style/Theme.RV_weather.NoActionBar" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".inscription.RegisterActivity"
             android:exported="false"
             android:theme="@style/Theme.RV_weather.NoActionBar" />
         <activity
-            android:name=".ConnexionActivity"
+            android:name=".connexion.ConnexionActivity"
             android:exported="true"
             android:theme="@style/Theme.RV_weather.NoActionBar">
             <intent-filter>

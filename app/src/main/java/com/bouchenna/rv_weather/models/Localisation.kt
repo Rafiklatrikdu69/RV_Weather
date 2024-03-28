@@ -1,4 +1,4 @@
-package com.bouchenna.rv_weather
+package com.bouchenna.rv_weather.models
 
 import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.GeoPoint

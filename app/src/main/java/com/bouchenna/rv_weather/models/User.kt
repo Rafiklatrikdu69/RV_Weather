@@ -1,4 +1,4 @@
-package com.bouchenna.rv_weather
+package com.bouchenna.rv_weather.models
 data class User(
     var pseudo: String,
     var password: String,

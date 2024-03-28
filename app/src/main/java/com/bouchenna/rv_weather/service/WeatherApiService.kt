@@ -1,8 +1,7 @@
 package com.bouchenna.rv_weather.service
 
-import com.bouchenna.rv_weather.AirPollutionResponse
-import com.bouchenna.rv_weather.WeatherForecastResponse
-import com.bouchenna.rv_weather.WeatherResponse
+import com.bouchenna.rv_weather.models.AirPollutionResponse
+import com.bouchenna.rv_weather.models.WeatherResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
