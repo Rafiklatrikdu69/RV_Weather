@@ -16,7 +16,7 @@
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp"
-            android:layout_marginStart="8dp"
+            
             android:padding="10dp"
             app:cardBackgroundColor="@color/blue_7">
 
