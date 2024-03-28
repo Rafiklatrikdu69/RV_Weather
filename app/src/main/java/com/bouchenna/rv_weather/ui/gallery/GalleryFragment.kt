@@ -4,7 +4,6 @@ import YourXAxisValueFormatter
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,15 +11,14 @@ import android.widget.TableRow
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.bouchenna.rv_weather.AirPollutionResponse
-import com.bouchenna.rv_weather.WeatherForecastResponse
-import com.bouchenna.rv_weather.WeatherResponse
+import com.bouchenna.rv_weather.models.AirPollutionResponse
+import com.bouchenna.rv_weather.service.WeatherForecastResponse
+import com.bouchenna.rv_weather.models.WeatherResponse
 import com.bouchenna.rv_weather.databinding.FragmentGalleryBinding
 import com.bouchenna.rv_weather.service.WeatherApiService
 import com.bumptech.glide.Glide
 
 import com.github.mikephil.charting.charts.LineChart
-import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
@@ -32,8 +30,6 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.jjoe64.graphview.series.DataPoint
 import com.jjoe64.graphview.GraphView
-import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter
-import com.jjoe64.graphview.series.LineGraphSeries
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -41,9 +37,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.text.SimpleDateFormat
 import kotlin.math.roundToInt
-import kotlin.math.roundToLong
 
-class GalleryFragment : Fragment() {
+    class GalleryFragment : Fragment() {
 
     private var _binding: FragmentGalleryBinding? = null
     lateinit var lineGraphView: GraphView

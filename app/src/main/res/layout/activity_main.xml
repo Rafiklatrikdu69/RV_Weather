@@ -85,8 +85,40 @@
                 android:id="@+id/bottomAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:menu="@menu/menu_bottom_app_bar"
-                tools:ignore="BottomAppBar" />
+                android:layout_gravity="bottom"
+                app:backgroundTint="@color/blue_8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp">
+
+                    <!-- Premier bouton -->
+
+                    <!-- Deuxième bouton -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="8dp"
+                        app:cardBackgroundColor="@color/blue_8"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <ImageButton
+                            android:id="@+id/map"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/map"
+                            android:padding="8dp"
+                            android:src="@drawable/map" />
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

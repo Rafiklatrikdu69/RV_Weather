@@ -1,5 +1,6 @@
-package com.bouchenna.rv_weather
+package com.bouchenna.rv_weather.inscription
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +9,12 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bouchenna.rv_weather.MainActivity
+import com.bouchenna.rv_weather.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
+import com.bouchenna.rv_weather.connexion.ConnexionActivity
+
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var editTextEmail: TextInputEditText
@@ -29,6 +34,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -37,6 +43,7 @@ class RegisterActivity : AppCompatActivity() {
         button = findViewById(R.id.buttonInscription)
         auth = FirebaseAuth.getInstance()
         toConnection = findViewById(R.id.textViewToConnection)
+
 
         toConnection.setOnClickListener{
             val intent = Intent(this, ConnexionActivity::class.java)

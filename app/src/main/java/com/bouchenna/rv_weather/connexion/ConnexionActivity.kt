@@ -1,4 +1,4 @@
-package com.bouchenna.rv_weather
+package com.bouchenna.rv_weather.connexion
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -8,6 +8,9 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bouchenna.rv_weather.MainActivity
+import com.bouchenna.rv_weather.R
+import com.bouchenna.rv_weather.inscription.RegisterActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 

@@ -1,19 +1,22 @@
     package com.bouchenna.rv_weather.ui.home
 
 
+    import android.Manifest
     import android.annotation.SuppressLint
+    import android.provider.Settings
     import android.app.NotificationChannel
     import android.app.NotificationManager
     import android.app.PendingIntent
     import android.content.Context
     import android.content.Intent
-    import android.graphics.Bitmap
-    import android.graphics.BitmapFactory
+    import android.content.pm.PackageManager
     import android.net.ConnectivityManager
     import android.net.NetworkCapabilities
     import android.net.Uri
+    import android.net.wifi.WifiManager
     import android.os.Build
     import android.os.Bundle
+
     import android.util.Log
     import android.view.LayoutInflater
     import android.view.View
@@ -22,18 +25,21 @@
     import android.widget.TextView
     import android.widget.Toast
     import androidx.appcompat.app.AlertDialog
+    import androidx.core.app.ActivityCompat
     import androidx.core.app.NotificationCompat
     import androidx.core.app.NotificationManagerCompat
+    import androidx.core.content.ContextCompat
     import androidx.fragment.app.Fragment
     import androidx.lifecycle.ViewModelProvider
-    import com.bouchenna.rv_weather.Localisation
+    import com.bouchenna.rv_weather.models.Localisation
     import com.bouchenna.rv_weather.MainActivity
     import com.bouchenna.rv_weather.R
-    import com.bouchenna.rv_weather.WeatherResponse
+    import com.bouchenna.rv_weather.models.WeatherResponse
     import com.bouchenna.rv_weather.databinding.FragmentHomeBinding
     import com.bouchenna.rv_weather.service.WeatherApiService
     import com.bumptech.glide.Glide
     import com.google.android.gms.common.api.Status
+    import com.google.android.gms.location.LocationServices
     import com.google.android.gms.maps.CameraUpdateFactory
     import com.google.android.gms.maps.GoogleMap
     import com.google.android.gms.maps.OnMapReadyCallback
@@ -53,17 +59,12 @@
     import retrofit2.Response
     import retrofit2.Retrofit
     import retrofit2.converter.gson.GsonConverterFactory
-    import retrofit2.http.GET
-    import retrofit2.http.Query
-    import java.io.BufferedInputStream
-    import java.io.IOException
-    import java.net.URL
     import kotlin.math.roundToInt
 
 
     class HomeFragment (): Fragment() , OnMapReadyCallback, GoogleMap.OnMapClickListener {
-
-
+        private val PERMISSION_REQUEST_CODE = 1001
+        lateinit var wifiManager: WifiManager
         private lateinit var mainActivity: MainActivity
         val CHANNEL_ID = "pickerChannel"
         private var googleMap: GoogleMap? = null
@@ -75,8 +76,8 @@
         private var _binding: FragmentHomeBinding? = null
         private lateinit var test: Button
         private lateinit var user: FirebaseAuth
-        private var marker:Boolean= false
-        private  var weatherResponse:WeatherResponse?=null
+        private var marker: Boolean = false
+        private var weatherResponse: WeatherResponse? = null
 
         private val binding get() = _binding!!
         override fun onAttach(context: Context) {
@@ -87,6 +88,7 @@
                 throw IllegalStateException("Parent activity must be MainActivity")
             }
         }
+
         override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -103,6 +105,40 @@
             homeViewModel.text.observe(viewLifecycleOwner) {
                 textView.text = it
             }
+            if (ActivityCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED
+            ) {
+                val fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
+                fusedLocationClient.lastLocation
+                    .addOnSuccessListener { location ->
+                        if (location != null) {
+                            val latitude = location.latitude
+                            val longitude = location.longitude
+                            Log.d("latTest", latitude.toString())
+                            val lating = LatLng(latitude,longitude);
+                            val cameraUpdate = CameraUpdateFactory.newLatLngZoom(lating, 10f)
+                            googleMap?.moveCamera(cameraUpdate)
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.e("Location", "Impossible d'obtenir la localisation : ${exception.message}")
+                    }
+            } else {
+                requestPermissions(
+                    arrayOf(
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_COARSE_LOCATION
+                    ),
+                    PERMISSION_REQUEST_CODE
+                )
+            }
+
 
 
             val mapFragment =
@@ -115,6 +151,8 @@
                 googleMap?.uiSettings?.isMapToolbarEnabled = true
                 googleMap?.setOnMapClickListener(this)
             }
+
+
             binding.textView.visibility = View.GONE
             if (!Places.isInitialized()) {
                 Places.initialize(
@@ -122,6 +160,7 @@
                     "AIzaSyAUhesh_MfnKVmEET8G6IKmDVaYUocE_yI"
                 )
             }
+
 
             val autocompleteFragment =
                 childFragmentManager.findFragmentById(R.id.autocomplete_fragment)
@@ -135,19 +174,25 @@
                 override fun onError(status: Status) {
                     Log.e(TAG, "Error occurred: $status")
 
-                    Toast.makeText(requireContext(), "Error occurred: $status", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Error occurred: $status", Toast.LENGTH_SHORT)
+                        .show()
                 }
 
                 override fun onPlaceSelected(p0: Place) {
                     if (p0.latLng != null) {
+
                         val lating = p0.latLng
                         val cameraUpdate = CameraUpdateFactory.newLatLngZoom(lating, 15f)
                         googleMap?.moveCamera(cameraUpdate)
 
                         get(lating)
 
+
                     }
+
+
                 }
+                // }
 
             })
 
@@ -161,8 +206,6 @@
             checkNetworkConnectivity()
 
         }
-
-
 
 
         override fun onDestroyView() {
@@ -203,7 +246,7 @@
                                     )?.icon + ".png"
                                 )
 
-                               // Log.d("img", uri.toString())
+                                // Log.d("img", uri.toString())
                                 context?.let {
 
                                     val imageView = binding.meteo
@@ -213,8 +256,6 @@
                                             .load(uri)
                                             .into(imageView)
                                     }
-
-
 
 
                                 }
@@ -261,7 +302,7 @@
                                 }
                             }
 
-                            } else {
+                        } else {
                             Log.e(TAG, "Failed to get weather data: ${response.code()}")
                         }
 
@@ -273,48 +314,8 @@
                 })
 
         }
-        private fun getImageBitmap(url: String): Bitmap? {
-            var bm: Bitmap? = null
-            try {
-                val aURL = URL(url)
-                val conn = aURL.openConnection()
-                conn.connect()
-                val `is` = conn.getInputStream()
-                val bis = BufferedInputStream(`is`)
-                bm = BitmapFactory.decodeStream(bis)
-                bis.close()
-                `is`.close()
-            } catch (e: IOException) {
-                Log.e(TAG, "Error getting bitmap", e)
-            }
-            return bm
-        }
-        private fun showWeatherPopup(weatherResponse: WeatherResponse) {
-            val dialogBuilder = AlertDialog.Builder(requireContext())
-            val message = "Country: ${weatherResponse.sys?.country}\n" +
-                    "Temperature: ${weatherResponse.main?.temp?.minus(273.15)} °C\n" +
-                    "Description: ${weatherResponse.weather?.firstOrNull()?.description}"
-
-            dialogBuilder.setTitle("Weather Information")
-            dialogBuilder.setMessage(message)
-            dialogBuilder.setPositiveButton(null, null)
-
-            val dialog = dialogBuilder.create()
-            dialog.show()
-            if (!notificationChannelCreated) {
-                context?.let {
-                    createNotificationChannel(it)
-
-                    Log.d("notif", "pas null !")
-                }
-                notificationChannelCreated = true
-            }
-
-            // Afficher la notification
-            runNotify()
 
 
-        }
 
 
         fun createNotificationChannel(context: Context) {
@@ -366,12 +367,6 @@
             notificationManager.notify(0, notification)
         }
 
-        override fun onMapReady(googleMap: GoogleMap?) {
-
-
-        }
-
-
 
         override fun onMapClick(point: LatLng) {
             val cameraUpdate = CameraUpdateFactory.newLatLngZoom(point, 5f)
@@ -394,7 +389,6 @@
             }
             get(point)
         }
-
 
 
         @SuppressLint("MissingPermission")
@@ -420,9 +414,82 @@
         }
 
         private fun showNoInternetMessage() {
-            Toast.makeText(requireContext(), "Pas de connexion Internet", Toast.LENGTH_LONG).show()
-        }
-    }
+            val alertDialogBuilder = AlertDialog.Builder(mainActivity!!)
+            alertDialogBuilder.apply {
+                setMessage("Choisissez une option:")
+                setPositiveButton("Données mobiles") { dialog, which ->
+                    val intent = Intent().apply {
+                        action = Settings.ACTION_DATA_ROAMING_SETTINGS
+                    }
+                    startActivity(intent)
+                    dialog.dismiss()
+                }
+                setNeutralButton("Wi-Fi") { dialog, which ->
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                        // Pour Android 10 (Q) et versions ultérieures
+                        val panelIntent = Intent(Settings.Panel.ACTION_WIFI)
+                        startActivityForResult(panelIntent, PERMISSION_REQUEST_CODE)
+                    } else {
 
+                        val wifiManager = mainActivity.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
+                        if (ContextCompat.checkSelfPermission(mainActivity, Manifest.permission.CHANGE_WIFI_STATE) != PackageManager.PERMISSION_GRANTED) {
+
+                            ActivityCompat.requestPermissions(mainActivity, arrayOf(Manifest.permission.CHANGE_WIFI_STATE), PERMISSION_REQUEST_CODE)
+                        } else {
+
+                            wifiManager.isWifiEnabled = true
+                            Toast.makeText(mainActivity, "Wifi activé", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    dialog.dismiss()
+                }
+                setNegativeButton("Annuler") { dialog, which ->
+                    dialog.dismiss()
+                }
+                setCancelable(false)
+                create().show()
+            }
+
+            // Toast.makeText(requireContext(), "Pas de connexion Internet", Toast.LENGTH_LONG).show()
+        }
+
+        override fun onMapReady(googleMap: GoogleMap?) {
+
+            ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED &&
+                    ActivityCompat.checkSelfPermission(
+                        requireContext(),
+                        Manifest.permission.ACCESS_COARSE_LOCATION
+                    ) == PackageManager.PERMISSION_GRANTED
+            requestPermissions(
+                arrayOf(
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ),
+                PERMISSION_REQUEST_CODE
+            )
+
+
+
+            val fusedLocationClient =
+                LocationServices.getFusedLocationProviderClient(requireContext())
+            fusedLocationClient.lastLocation
+                .addOnSuccessListener { location ->
+                    println("passe par la !")
+                    if (location != null) {
+                        val latitude = location.latitude
+                        val longitude = location.longitude
+                        Log.d("latTest", latitude.toString())
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.e("Location", "Impossible d'obtenir la localisation : ${exception.message}")
+                }
+        }
+
+
+    }
 
 

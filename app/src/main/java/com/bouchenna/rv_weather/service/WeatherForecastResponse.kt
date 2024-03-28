@@ -1,4 +1,4 @@
-package com.bouchenna.rv_weather
+package com.bouchenna.rv_weather.service
 
 data class WeatherForecastResponse(
     val cod: String,

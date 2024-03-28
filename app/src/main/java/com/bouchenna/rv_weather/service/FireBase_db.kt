@@ -1,7 +1,7 @@
 package com.bouchenna.rv_weather.service
 import android.content.ContentValues.TAG
 import android.util.Log
-import com.bouchenna.rv_weather.Localisation
+import com.bouchenna.rv_weather.models.Localisation
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.toObject
