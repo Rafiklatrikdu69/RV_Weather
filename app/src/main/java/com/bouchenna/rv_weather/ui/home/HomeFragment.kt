@@ -157,7 +157,7 @@
             if (!Places.isInitialized()) {
                 Places.initialize(
                     requireContext(),
-                    "AIzaSyAUhesh_MfnKVmEET8G6IKmDVaYUocE_yI"
+                    "API_KEY"
                 )
             }
 
